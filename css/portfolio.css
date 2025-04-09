@@ -1,0 +1,1323 @@
+body {
+  display: flex;
+  justify-content: center;
+  color: #888;
+  background: #273538 url(https://uxthis.skopp.sk/seamless.jpg) 50% 0 repeat;
+}
+
+.container {
+  display: flex;
+  width: 1300px;
+  margin: 50px 0;
+}
+
+.content {
+  width: 1100px;
+  background-color: #f4f4f4;
+}
+
+h1 {
+  color: #333;
+  font-size: 41px;
+  text-align: center;
+  border-bottom: 1px solid #b5b5b5;
+  padding: 100px 0 60px;
+  margin: 0 85px 60px;
+}
+
+h2 {
+  color: #333;
+  text-align: left;
+  line-height: 38px;
+  margin: 40px 0 20px;
+}
+
+h5 {
+  display: block;
+  font-size: 18px;
+  color: #111;
+  text-align: left;
+  font-weight: 400;
+  text-transform: none;
+  padding: 20px 0 15px; 
+}
+
+a, a:link, a:visited {
+  color: #86ae8c;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #364538;
+}
+
+p {
+  font-size: 18px;
+  margin: 0;
+}
+
+p.ul {
+  margin-bottom: 10px;
+}
+
+strong {
+  font-weight: normal;
+  color: #222;
+}
+
+em {
+
+}
+
+i.fa {
+  margin-right: 5px;
+}
+
+abbr {
+  text-decoration: none;
+}
+
+.reveal {
+  opacity: 0;
+}
+
+.learnmore {
+  display: none;
+}
+
+
+/*
+--------------------------------------------------------------------
+NAV
+--------------------------------------------------------------------
+*/
+
+
+.nav {
+  width: 200px;
+  position: sticky;
+  top: 30px;
+  height: 380px;
+  background-color: #333;
+  padding: 40px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Distributes content */
+  align-items: flex-start; /* Center content horizontally */
+  overflow: hidden;
+  box-shadow: none;
+}
+
+.logo, nav.navigation, .nav .social {
+  margin: 0 50px;
+}
+
+.nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.nav h2 {
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+.nav .social a {
+  color: #fff;
+  text-indent: 0;
+  opacity: 0.5;
+}
+
+.nav .social a:hover {
+  opacity: 1;
+}
+
+
+
+/*
+--------------------------------------------------------------------
+HELLO
+--------------------------------------------------------------------
+*/
+
+.hello {
+  background: #ccc url(../images/jules-white@2x.jpg) 0 0 no-repeat;
+  background-size: cover;
+  min-height: 460px;
+}
+
+.hello .video {
+  display: none;
+  cursor: pointer;
+  position: relative; /* because overlay is absolute */
+  max-height: 460px; /* weird spacing bug fix*/
+}
+
+#video-desktop-play {
+  color: #ccc;
+}
+
+.preload-video {
+  display: none;
+}
+
+.hello .play:hover { 
+  background-color: #555;
+  color: #FFF;
+}
+
+.hello .close {
+  display: block;
+  float: right;
+  width: 50px;
+  height: 50px;
+  margin: 10px;
+  background: transparent url(../images/icons.svg) 0 0 no-repeat;
+  background-position: 0 -50px  ;
+  background-size: 50px 250px;
+  fill: #FFF;
+  opacity: 0.5;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.hello h1 {
+  color: #333;
+  text-align: left;
+  margin: 0 85px 0 50%;
+  padding: 120px 0 0 0;
+  border: none;
+}
+
+.hello .hero-description {
+  margin: 0 0 0 50%;
+}
+
+.hello .hero-description p {
+  color: #333;
+  margin: 20px 105px 20px 0;
+}
+
+.hello a, .hello a:link, .hello a:visited {
+  color: #333;
+  opacity: 0.5;
+}
+
+.hello a:hover, .hello a:active {
+  opacity: 0.9;
+}
+
+#video-overlay {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  justify-content: center;
+  align-items: center;
+}
+
+#video-overlay-play {
+  position: absolute; 
+  top: 50%; 
+  left: 50%; 
+  transform:translate(-50%, -50%);
+}
+
+.hello .gallery {
+  flex: 0 0 325px;
+}
+
+.hello .gallery p {
+  padding-left: 125px;
+  
+}
+
+.hello .description {
+  flex: 1;
+}
+
+.hello .description p {
+  margin-right: 85px;
+}
+
+/*
+--------------------------------------------------------------------
+SKILLS
+--------------------------------------------------------------------
+*/
+
+
+.skills {
+  background-color: #fff;
+}
+
+.skills .all-three-cols {
+  background-color: #fff;
+  margin: 0 85px 0 85px;
+  display: flex;
+  align-items: normal;
+  justify-content: center;
+}
+
+.one-of-three-cols {
+  flex: 1;
+}
+
+.one-of-three-cols h4 {
+  margin-left: 15px;
+  text-align: left; 
+}
+
+.one-of-three-cols:first-child h4 {
+  margin-left: 0px;
+}
+
+.one-of-three-cols p, 
+.one-of-three-cols a {
+  font-size: 17px;
+  margin: 0 15px;
+}
+
+.one-of-three-cols:first-child p, 
+.one-of-three-cols:first-child a { /* first column can stretch more to the left */
+  margin: 0 15px 0 0;
+}
+
+.one-of-three-cols:last-child p { /* last column can stretch more to the right */
+  margin: 0 0 0 15px;
+}
+
+.one-of-three-rows { /* for horizontal layout */
+  display: flex;
+  align-items: normal;
+  justify-content: center;
+}
+
+.one-of-three-rows p { /* for horizontal layout */
+  font-size: 18px;
+  padding: 0 85px 0 0;
+  
+}
+
+
+/*
+--------------------------------------------------------------------
+DIALOG
+--------------------------------------------------------------------
+*/
+
+
+body.dialog-open {
+  overflow: hidden; /* Prevent scrolling on the body */
+}
+
+.dialog-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(5px);
+  z-index: 800;
+  overflow-y: auto; /* Allow scrolling within the dialog */
+}
+
+.dialog-content {
+  position: relative;
+  background: #fff;
+  padding: 20px;
+  margin: 20px auto; /* Center the dialog horizontally */
+  z-index: 850;
+  width: 90%; /* Ensure it doesn't exceed the viewport width */
+  max-height: 90vh; /* Constrain height to viewport */
+  overflow-y: auto; /* Allow scrolling within the dialog content */
+}
+
+.dialog-content section {
+  max-width: 1280px; /* Set max-width */
+  margin: 20px auto; /* Center the dialog horizontally */
+}
+
+.dialog-content .close {
+  z-index: 900;
+}
+
+.close {
+  display: block;
+  float: right;
+  position: sticky;
+  top: 10px;
+  right: 10px;
+  width: 50px;
+  height: 50px;
+  background: transparent url(../images/icons.svg) 0 0 no-repeat;
+  background-size: 50px 250px;
+  opacity: 0.5;
+  cursor: pointer;
+  z-index: 800;
+  transition: opacity 0.2s ease;
+}
+
+.close:hover {
+  opacity: 1;
+}
+
+.expanded .close {
+  display: block;
+}
+
+
+/*
+--------------------------------------------------------------------
+PROCESS
+--------------------------------------------------------------------
+*/
+
+.process {
+  display: flex;
+  background-color: #fff;
+}
+
+.process .scribble {
+  flex: 0 0 320px;
+  min-height: 900px;
+  background: transparent url(../images/scribble-2.svg) 1px -30px no-repeat;
+  background-size: 285px 1550px;
+}
+
+
+/*
+--------------------------------------------------------------------
+PROJECTS --- HEAD
+--------------------------------------------------------------------
+*/
+
+
+/* adds a straight line to the background */
+.projects .line { 
+  background: url(../images/straight-line.svg) 0 0 repeat-y;
+  background-position: 35px 0; /*so it lines up with the harcoded rhombus*/
+}
+
+.projects .scribble {
+  min-height: 900px;
+  background: transparent url(../images/scribble-2.svg) 1px -30px no-repeat;
+  background-size: 285px 1550px;
+}
+
+.projects {
+  background-color: #fff;
+  padding-bottom: 80px;
+}
+
+.projects .filter-container {
+  margin: 0 85px;
+}
+
+.projects .filter-button {
+  background-color: transparent;
+  border: 0.5px solid #ccc;
+  color: #333;
+  margin: 0 4px 8px 0;
+  padding: 3px 12px 2px 12px;
+  font-size: 15px;
+}
+
+.projects .filter-button:hover {
+  background-color: #EAEAEA;
+  color: #000;
+}
+
+.projects .filter-button.active {
+  background-color: #86ae8c; /* teal = active state */
+  color: #FFF;
+}
+
+.projects .no-results-message {
+  display: none;
+  margin-top: 50px;
+}
+
+.projects .no-results-message p {
+  margin-left: 85px;
+}
+
+.projects ul {
+  list-style: none;
+  display: inline-block;
+  padding-bottom: 20px;
+  font-size: 18px;
+  clear: none;
+}
+
+.projects ul li {
+  list-style: none;
+  width: 100%;
+}
+
+.projects > ul {
+  display: block;
+  list-style: none;
+  margin: 0;
+}
+
+.projects > ul > li {
+  display: block;
+  background-image: none;
+  margin: 0;
+  clear: both;
+}
+
+.projects .head {
+  padding: 25px 0 25px 0;
+}
+
+.projects .head {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+
+.projects .details {
+  display: flex;
+  align-items: normal;
+  justify-content: left;
+}
+
+/* overrides for master.css */
+
+.projects .head .description, 
+.projects .details .description {
+  /*padding: 0 !important;*/
+}
+
+.projects .head .gallery, 
+.projects .details .gallery {
+  /*padding: 0 !important;*/
+  min-height: 0;
+  flex: 0 0 320px;
+}
+
+.projects .head:hover {
+  background-color: #f6f6f6;
+  transition: background-color 0.5s ease-out;
+  cursor: pointer;
+}
+
+.projects li:first-child .head {
+  background-repeat: no-repeat;
+  background-position: 35px 50px; /*so it lines up with the harcoded rhombus*/
+  margin-top: 50px;
+  padding: 25px 0 25px 0;
+}
+
+.projects li:last-child .head {
+  padding-bottom: 25px;
+}
+
+.datetime {
+  margin: 0;
+}
+
+.tags {
+  margin: 5px 0;
+}
+
+.tag {
+  font-size: 14px;
+  text-transform: uppercase;
+  border-radius: 2px;
+  border: 1px solid #ccc;
+  padding: 3px 6px;
+}
+
+.tag.highlighted {
+  background-color: rgba(134, 174, 140, 0.2); /* equals to #86ae8c */
+}
+
+
+.projects .rhombus {
+  width: 157px;
+  height: 157px;
+  margin-left: 107px;
+  background-image: url(../images/projects-reassigned@2x.png);
+  background-size: 3454px 314px;
+  background-repeat: no-repeat;
+}
+
+/* Sprite is divided by 157px increments */
+.projects [class*="p"] .rhombus {
+  background-position: calc(-157px * (var(--index) - 1)) 0;
+}
+
+/* Assign --index based on class name (p1 to pNN) */
+.projects .p1 { --index: 1; }
+.projects .p2 { --index: 2; }
+.projects .p3 { --index: 3; }
+.projects .p4 { --index: 4; }
+.projects .p5 { --index: 5; }
+.projects .p6 { --index: 6; }
+.projects .p7 { --index: 7; }
+.projects .p8 { --index: 8; }
+.projects .p9 { --index: 9; }
+.projects .p10 { --index: 10; }
+.projects .p11 { --index: 11; }
+.projects .p12 { --index: 12; }
+.projects .p13 { --index: 13; }
+.projects .p14 { --index: 14; }
+.projects .p15 { --index: 15; }
+.projects .p16 { --index: 16; }
+.projects .p17 { --index: 17; }
+.projects .p18 { --index: 18; }
+.projects .p19 { --index: 19; }
+.projects .p20 { --index: 20; }
+.projects .p21 { --index: 21; }
+
+
+.projects .description h2 {
+  padding: 0;
+  margin: 0 0 10px;
+}
+
+.projects .closure {
+
+}
+
+/*
+--------------------------------------------------------------------
+PROJECTS --- HEAD EXPANDED
+--------------------------------------------------------------------
+*/
+
+/* Alternate background colors for expanded projects */
+
+li.expanded {
+  background-color: #f6f6f6;
+}
+
+.projects .expanded section.head, 
+.projects .expanded .description {
+  cursor: default;
+}
+
+.projects .expanded .rhombus {
+  background-position-y: -157px; /* when expanded make it colourful */
+}
+
+.projects .close {
+  display: none;
+  cursor: pointer;  
+}
+
+.projects .expanded .close {
+  display: block;
+  float: right;
+  width: 50px;
+  height: 50px;
+  margin: 10px;
+  background: transparent url(../images/icons.svg) 0 0 no-repeat;
+  background-size: 50px 250px;
+  opacity: 0.5;
+  cursor: pointer;
+  z-index: 800;
+  transition: opacity 0.2s ease;
+}
+
+.projects .expanded .close:hover {
+  opacity: 1;
+}
+
+/*
+--------------------------------------------------------------------
+PROJECTS --- DETAILS
+--------------------------------------------------------------------
+*/
+
+/* everything in gallery */
+
+.projects .gallery img.thumb {
+  display: block;
+  width: 120px;
+  margin-left: 125px;
+  height: auto;
+  background: none;
+  margin-bottom: 20px;
+  opacity: 0;
+  border: 1px solid #999;
+}
+
+.projects .gallery p {
+  margin: 0 40px 0 85px; /* attempting to center links under the rhombus */
+  text-align: center;
+}
+
+.projects .gallery p a { /*buttons and links in the gallery */
+  background-color: rgba(255,255,255,0.6);
+  padding: 8px 10px;
+  display: inline-block;
+}
+
+.projects .gallery p a:hover {
+  background-color: rgba(255,255,255,0.9);
+}
+
+.projects li:last-child .hidden .gallery {
+  background: none;
+}
+
+.projects .expanded .details {
+  padding-bottom: 20px;
+}
+
+.projects .details .description p {
+  margin: 0 85px 20px 0;
+}
+
+.projects .inline-gallery {
+  display: none; /* images included in the descriptions are hidden on large screens */
+}
+
+/*
+--------------------------------------------------------------------
+CONTACT
+--------------------------------------------------------------------
+*/
+
+.contact {
+  color: #fff;
+  background-color: #2b3d41; /* #293336 */
+  padding-bottom: 80px;
+}
+
+.contact .email,
+.contact .message {
+  display: flex;
+  align-items: normal;
+  justify-content: left;
+}
+
+.contact .email .gallery,
+.contact .message .gallery {
+  flex: 0 0 320px;
+}
+
+
+.contact h1 {
+  color: #fff;
+  opacity: 0.7;
+  border-color: #fff;
+}
+
+.contact label, 
+.contact p {
+  display: block;
+  opacity: 0.7;
+  padding-bottom: 20px;
+  margin-left: 85px;
+}
+
+.contact input[type=text], 
+.contact textarea {
+  border: none;
+  display: block;
+  width: 500px;
+  margin-bottom: 40px;
+  background-color: #fff;
+  opacity: 0.7;
+}
+
+.contact input[type=text]:focus, 
+.contact textarea:focus {
+  opacity: 1;
+}
+
+.contact input[type=submit] {
+  background-color: #374851;
+  padding: 10px 50px;
+}
+
+.contact input[type=submit]:hover {
+  background-color: #425661;
+}
+
+.contact form {
+  margin: 40px 0 0 0;
+}
+
+.hide {
+  display: none;
+}
+
+/*
+--------------------------------------------------------------------
+ANIMATIONS
+--------------------------------------------------------------------
+*/
+
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
+
+@-webkit-keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+.fadeInUp {
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+}
+
+@-webkit-keyframes fadeInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+.fadeInDown {
+  -webkit-animation-name: fadeInDown;
+  animation-name: fadeInDown;
+}
+
+@-webkit-keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+.fadeInLeft {
+  -webkit-animation-name: fadeInLeft;
+  animation-name: fadeInLeft;
+}
+
+/*
+--------------------------------------------------------------------
+768-1279
+--------------------------------------------------------------------
+*/
+
+
+@media only screen and (max-width: 1279px) {
+
+  /* ----- NAV & LAYOUT ----- */
+  .mobile-menu-wrapper { 
+    display: block; /*overrides master.css*/
+  }
+
+  .widget {
+    padding: 0px; /*overrides master.css*/
+  }
+
+  .widget h2 {
+    margin: 0; /*overrides master.css*/
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .logo {
+    margin: 0;
+  }
+
+  .container, .content {
+    width: 768px;
+  }
+
+  h1 {
+    margin: 0 40px 40px;
+    padding: 60px 0 40px 0; 
+  }
+
+  /* ----- HELLO ----- */
+
+  .hello {
+    background-position-x: 80%;
+  }
+
+  .hello.video-playing {
+    background: #333;
+  }
+
+  .hello .learnmore {
+    display: block;
+  }
+
+  .hello h1 {
+    margin: 0 0 0 50%;
+    padding-top: 80px;
+  }
+
+  /* ----- SKILLS ----- */
+
+  .skills .all-three-cols {
+    margin: 0 40px;
+  }
+
+  /* ----- PROJECTS ----- */
+
+
+  .projects .filter-container {
+    margin: 0 40px;
+  }
+
+  .projects .head .gallery, 
+  .projects .details .gallery {
+    flex: 0 0 200px;
+  }
+
+  .projects li:first-child section.head {
+    /*padding-top: 40px;*/
+    margin-top: 20px;
+  }
+
+  .process .gallery {
+    background-position: 0px 0px;
+    background-size: 100%;
+    height: 700px;
+    min-height: 700px;
+  }
+
+  .projects .thumb, 
+  .projects .rhombus, 
+  .projects .gallery img.thumb, 
+  .projects .gallery p {
+    width: 120px;
+    margin: 0 0 20px 40px;
+    padding: 0;
+    font-size: 16px;
+  }
+
+  .projects .rhombus {
+    margin: 0 0 0 40px;
+    height: 120px;
+    background-size: 2640px 240px;
+  }
+
+  /* Sprite is divided by 120px increments */
+  .projects [class*="p"] .rhombus {
+    background-position: calc(-120px * (var(--index) - 1)) 0;
+  }
+
+  .projects .expanded .rhombus {
+    background-position-y: -120px; /* when expanded make it colourful */
+  }
+
+  .projects li:first-child section.head {
+    background-position: -50px 50px; /* first item's line should not go above the rhombus */
+  }
+
+  .projects section.line { 
+    background-position: -50px 0; /*so it lines up with the harcoded rhombus*/
+  }
+
+  .projects section.scribble {
+    min-height: 40px;
+    background-position: -28px 0px;
+    background-size: 200px 1052px;
+  }
+
+  .projects .learnmore {
+    display: block;
+    padding-top: 5px;
+  }
+
+  .projects .tags {
+    margin-right: 40px;
+  }
+
+  .projects .no-results-message p {
+    margin-left: 40px;
+  }
+
+  .projects .expanded .head .learnmore {
+    visibility: hidden; /* to prevent jumpiness when sliding it out */
+  }
+
+  .projects .expanded .hidden .learnmore {
+    padding: 0;
+  }
+
+  .projects .description p {
+    margin: 0 60px 0 0;
+  }
+
+  /* ----- CONTACT ----- */
+
+  .contact input[type=text], .contact textarea {
+    width: 322px;
+  }
+
+  .contact p, .contact .gallery label {
+    margin: 0 40px 10px 40px;
+    padding: 0;
+  }
+
+
+}
+
+/*
+--------------------------------------------------------------------
+600-768
+--------------------------------------------------------------------
+*/
+
+@media only screen and (max-width: 767px) {
+
+  /* ----- NAV & LAYOUT ----- */
+
+  .container, 
+  .content {
+    margin: 0;
+    width: 100%;
+  }
+
+  h1 {
+    margin: 0 40px 40px;
+    padding: 60px 0 40px 0;
+  }
+
+  p {
+    /*padding: 0 20px;*/
+  }
+
+  h1 {
+    font-size: 32px;
+    padding: 50px 0 40px;
+    margin: 0 0 40px 0;
+  }
+
+  /* ----- HELLO ----- */
+
+  .hello {
+    position: relative; /* so the description sticks to the bottom */
+    background-position-x: 20%;
+  }
+
+  .hello h1 {
+    font-size: 41px;
+    padding-top: 140px;
+    margin-left: 60%;
+  }
+
+  .hello .hero-description {
+    position: absolute;
+    bottom: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-start;
+  }
+
+  .hello .hero-description p {
+    padding: 20px;
+    margin: 0;
+    background-color: rgba(255, 255, 255, 0.7);
+  }
+
+  .hello #video-desktop-play {
+    margin: 0 0 60px 60%;
+  }
+
+  .hello .learnmore { /* this is the resume link in the desc */
+    display: inline-block;
+  }
+
+  /* ----- SKILLS ----- */
+
+  .skills .all-three-cols {
+    flex-direction: column;
+  }
+
+  .skills .one-of-three-cols p, 
+  .skills .one-of-three-cols a  {
+    margin: 0;
+    padding: 0;
+  }
+
+  .skills .one-of-three-cols h4 {
+    margin: 0;
+  }
+
+  .process {
+    flex-direction: column;
+  }
+
+  .process .gallery.scribble {
+    flex: 0 0 200px;
+    min-height: 200px;
+    background: url(../images/scribble-ls.svg) 0 0 no-repeat;
+    background-size: 100%;
+  }
+
+  .process .description {
+    padding-left: 20px; 
+  }
+
+  /* ----- PROJECTS ----- */
+
+  .scribble-start, .projects .expanded .hidden .gallery {
+    background-position: -48px 0px;
+  }
+
+  /* ----- CONTACT ----- */
+
+  .contact .email,
+  .contact .message {
+    flex-direction: column;
+  }
+
+  .contact .email .gallery,
+  .contact .message .gallery {
+    flex: 1;
+  }
+
+  .contact .gallery label {
+    margin-left: 40px;
+  }
+
+  .contact input[type=text], 
+  .contact textarea {
+    width: 80%;
+    margin: 0 0 20px 40px;
+  }
+
+  .contact input[type=submit] {
+    margin-left: 40px;
+  }
+
+}
+
+
+/*
+--------------------------------------------------------------------
+430-600
+--------------------------------------------------------------------
+*/
+
+@media only screen and (max-width: 600px) {
+
+  /* ----- PROJECTS ----- */
+
+  .projects section.head {
+    display: block; /* getting rid of flexbox so close button doesn't push it out */
+  }
+
+  .projects .description h2 {
+    margin: 0 20px 10px;
+  }
+
+  .projects section.head.line {
+    background: none; /* no longer illustrate the line in the background */
+  }
+
+  .projects .tags {
+    text-align: center;
+    margin-left: 40px;
+  }
+
+  .projects section.line,
+  .projects section.scribble {
+    background: none;
+  }
+
+  .projects .expanded .head .learnmore {
+    display: none; /* now we actually need to hide it—no longer jumpiness issue */
+  }
+
+  .projects .details .description p {
+    margin: 0 40px 10px 40px;
+  }
+
+  .projects .details .description h5 {
+    margin: 0 40px;
+  }
+
+  .projects li section.head, 
+  .projects li .head .description {
+    padding-top: 25px;
+  }
+
+  .projects .learnmore {
+    padding-bottom: 25px;
+  }
+
+  .projects .expanded .hidden .gallery {
+    display: none;
+  }
+
+  .projects h2, 
+  .projects .head p {
+    text-align: center;
+  }
+
+  .projects .head .description p {
+    margin: 0;
+  }
+
+  .projects .thumb, 
+  .projects .rhombus {
+    margin: 0 auto;
+  }
+
+
+  /*pictures are included in the content instead of the side gallery */
+
+  .projects .inline-gallery {
+    display: flex;
+    padding: 0 40px;
+    margin: 0;
+  }
+
+  .projects .inline-gallery a {
+  flex: 1; /* Allows items to grow */
+  min-width: 0; /* Important for proper flex behavior */
+  max-width: 200px; /* Your maximum width constraint */
+  display: block;
+  padding: 0 10px 0 0;
+  }
+
+  .projects .inline-gallery img.thumb {
+  width: 100%; /* Fills the anchor tag's width */
+  height: auto; /* Maintains aspect ratio */
+  max-width: 100%; /* Additional safeguard */
+  display: block;
+  object-fit: contain; /* Shows full image without cropping */
+  border: 1px solid #ccc;
+  }
+
+}
+
+
+
+/*
+--------------------------------------------------------------------
+320-430
+--------------------------------------------------------------------
+*/
+
+@media only screen and (max-width: 429px) {
+
+  .hello h1 {
+    font-size: 32px;
+    padding-top: 50px;
+  }
+
+  .process .gallery {
+    height: 140px;
+    min-height: 140px;
+  }
+
+  .contact input[type=text], 
+  .contact textarea {
+    width: 70%;
+    margin: 0 40px 20px 40px;
+  }
+
+}
+

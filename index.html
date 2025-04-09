@@ -1,0 +1,2227 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BW6PCB73W7"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+
+    // =============================================
+    // SAFE GTAG WRAPPER (with user property support)
+    // =============================================
+    function trackEvent(eventName, eventParams) {
+      if (typeof gtag !== 'function') {
+        if (window.console) console.log('[GA4] Event (offline):', eventName, eventParams);
+        return;
+      }
+      gtag('event', eventName, eventParams);
+    }
+
+    // =============================================
+    // INTERNAL TRAFFIC HANDLING
+    // =============================================
+    const isInternal = document.cookie.includes('ga_internal=true');
+
+    //this is how to create the internal cookiefor 1 year:
+    //document.cookie = "ga_internal=true; path=/; max-age=31536000";
+    //and how to remove it:
+    //document.cookie = "ga_internal=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT";
+
+    // 1. Set user property (if gtag exists)
+    if (typeof gtag === 'function') {
+      gtag('set', 'user_properties', {
+        is_internal_user: isInternal ? 'true' : 'false'
+      });
+    }
+
+    // 2. Initialize GA (safe fallback)
+    try {
+      gtag('js', new Date());
+      gtag('config', 'G-BW6PCB73W7');
+    } catch (e) {
+      console.warn('[GA4] Config failed (offline mode)');
+    }
+</script>
+  </script>
+  <meta name="generator" content="HTML Tidy for Linux/x86 (vers 25 March 2009), see www.w3.org" />
+  <meta content="https://googledrive.com/host/0B4OBkEtRodKSemtGbGpxanAyYkU/fblogo200x200_2.jpg" property="og:image" />
+  <meta content="Jules Skopp's Portfolio" property="og:site_name" />
+  <meta content="portfolio" property="og:type" />
+  <meta content="Collection of projects over my career." property="description" />
+  <meta content="Collection of projects over my career." property="og:description" />
+  <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0" name="viewport" />
+  <title>Jules Skopp's portfolio</title>
+  <link href="https://uxthis.skopp.sk/master.css" id="general-style-css" media="all" rel="stylesheet" type="text/css" />
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=latin-ext,latin" rel="stylesheet" type="text/css" />
+  <link href="./css/portfolio.css" rel="stylesheet" type="text/css" />
+  <link href="./css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+  <link href="./css/swipebox.css" rel="stylesheet" type="text/css" />
+  <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+  <link rel="manifest" href="./site.webmanifest">
+</head>
+<body>
+  <div class="container">
+    <!-- / begin CONTAINER / -->
+    <div class="content">
+      <!-- / begin CONTENT / -->          
+      <div class="widget mobile-menu-wrapper">
+        <!-- / begin MOBILE NAV / -->
+        <div class="logo logo-above-content">
+          <h2>
+            Jules Skopp
+          </h2>
+        </div>
+        <!-- / end MOBILE NAV / -->
+      </div>
+      <section class="hello" id="hello">
+        <!-- / begin HELLO / -->
+        <div class="video">
+          <video src="videos/intro.mp4" width="100%" id="videos">
+            Nothing here.
+          </video>
+          <div id="video-overlay">
+            <button id="video-overlay-play" class="play">
+              <i class="fa fa-play"></i>
+              <span>Resume</span>
+            </button>
+            <div id="video-overlay-close" class="close"></div>
+          </div>
+          <!-- Hidden preload videos -->
+          <video class="preload-video" preload="auto" muted></video>
+          <video class="preload-video" preload="auto" muted></video>
+        </div>
+        <div class="image">
+          <div class="headline">
+            <h1 class="animated fadeIn">Hello</h1>
+          </div>
+          <div class="hero-description">
+            <p class="animated fadeIn">
+              I&#39;m an executive product leader with a passion for data-powered experiences. Co-founder of Design Leadership Therapy and a speaker on data, leadership, and product strategies.
+              <a href="jules-skopp-2025-resume.pdf" class="learnmore"><i class="fa fa-file-pdf-o"></i>Download my resume</a>
+            </p>
+            
+            <button id="video-desktop-play" class="play">
+              <i class="fa fa-play"></i>
+              <span>Play 3 min intro</span>
+            </button>
+          </div>
+        </div>
+      </section><!-- / end HELLO / -->
+      <section class="skills" id="skills">
+        <!-- / begin SKILLS / -->
+        <div class="all-three-cols">
+          <div class="one-of-three-cols">
+            <h4>Leadership</h4>
+            <p>Great teams don&#39;t just happen&mdash;they&#39;re built. With empathy and transparency, I cultivate collaboration, empower diverse talent, and create a culture where innovation thrives.</p>
+            <a href="#" class="tag-link" data-filter="Ops">See impact</a>
+          </div>
+          <div class="one-of-three-cols">
+            <h4>Product strategy</h4>
+            <p>From vision to execution, I help teams navigate complexity, turning bold ideas into scalable products. Lean-certified and impact-driven, I shape strategies that move businesses forward.</p>
+            <a href="#" class="tag-link" data-filter="Strategy">Explore innovations</a>
+          </div>
+          <div class="one-of-three-cols">
+            <h4>Data expertise</h4>
+            <p>Data isn&#39;t just numbers&mdash;it&#39;s a competitive edge. With a decade of experience, I transform insights into action, driving smarter decisions and sustainable growth.</p>
+            <a href="#" class="tag-link" data-filter="Data">Discover insights</a>
+          </div>
+        </div>
+      </section><!-- / end SKILLS / -->
+      <section class="projects" id="projects">
+        <!-- / begin PROJECTS / -->
+        <div class="headline">
+          <h1>Projects</h1>
+        </div>
+        <div class="filter-container">
+          <button class="filter-button active" data-filter="all">Show all</button>
+          <button class="filter-button" data-filter="AI/ML">AI/ML</button>
+          <button class="filter-button" data-filter="Data">Data</button>
+          <button class="filter-button" data-filter="Strategy">Strategy</button>
+          <button class="filter-button" data-filter="Growth">Growth</button>
+          <button class="filter-button" data-filter="Ops">Ops</button>
+          <button class="filter-button" data-filter="Craft">Craft</button>
+          <button class="filter-button" data-filter="A/B test">A/B test</button>
+          <button class="filter-button" data-filter="Mobile">Mobile</button>
+          <button class="filter-button" data-filter="E-commerce">E-commerce</button>
+          <button class="filter-button" data-filter="Advertising">Advertising</button>
+          <button class="filter-button" data-filter="Finance">Finance</button>
+          <button class="filter-button" data-filter="Sales">Sales</button>
+          <button class="filter-button" data-filter="Travel">Travel</button>
+          <button class="filter-button" data-filter="Maps">Maps</button>
+          <button class="filter-button" data-filter="Marketing">Marketing</button>
+          <button class="filter-button" data-filter="Productivity">Productivity</button>
+          <button class="filter-button" data-filter="Loyalty">Loyalty</button>
+          <button class="filter-button" data-filter="Highly-regulated">Highly-regulated</button>
+          <button class="filter-button" data-filter="B2C">B2C</button>
+          <button class="filter-button" data-filter="B2B">B2B</button>
+          <button class="filter-button" data-filter="B2B2C">B2B2C</button>
+        </div>
+        <!-- "No results" message container -->
+        <div id="no-results-message" class="no-results-message">
+          <p>You found a project I haven't worked on yet. Wow! <a href="#">Show all projects</a></p>
+        </div>
+        <ul>
+          <li class="p21">
+            <div class="close"></div>
+            <!-- Project when collapsed -->
+            <section class="head line" id="head_p21">
+              <div class="gallery reveal">
+                <div class="rhombus"></div>
+              </div>
+              <div class="description reveal">
+                <h2>Advertising</h2>
+                <div class="tags">
+                  <span class="tag">Travel</span>
+                  <span class="tag">Advertising</span>
+                  <span class="tag">E-commerce</span>
+                  <span class="tag">AI/ML</span>
+                  <span class="tag">Growth</span>
+                  <span class="tag">Strategy</span>
+                  <span class="tag">B2B2C</span>
+                </div>
+                <p class="datetime">
+                  <abbr class="timeago" title="2025-01-15">January 15, 2025</abbr> | Expedia
+                  <a href="#" class="learnmore">Learn more</a>
+                </p>
+              </div>
+            </section>
+            <!-- Project when expanded -->
+            <section class="details hidden line">
+              <div class="gallery">
+                <!-- Add relevant images here -->
+                <!-- Additional images as needed -->
+              </div>
+              <div class="description">
+                <h5>Discovery</h5>
+                <p>Our advertising solution had limitations&#8212;advertisers could only run one campaign at a time, requiring manual adjustments. Many turned to third-party tools, bypassing our platform. As Expedia's fastest-growing business, leadership saw an opportunity to expand advertising into a broader ecosystem alongside supply partner tools. However, advertisers had to create new accounts each time they accessed our solution, limiting adoption.</p>
+                <p>While working on the strategic ecosystem initiative (Ads Portal), we delivered tactical improvements to drive growth:
+                Bid automation powered by machine learning. GenAI-driven description and title generation for rapid ad testing. ML-powered image selection using A/B testing to maximize conversions.</p>
+                <h5>Solution</h5>
+                <p>I co-created the product vision and strategy with stakeholders and leadership. We introduced a shared identity system, eliminating the need for separate accounts and enabling seamless access across tools. The auction model was redesigned to support multiple campaigns, allowing comparisons of media formats and languages. Onboarding was simplified, cutting interaction steps by ~60%.</p>
+                <h5>Validation</h5>
+                <p>Results were immediate:
+                  Simplified onboarding brought in 260 new advertisers within a month.
+                  Bid automation increased revenue by ~$5&#8208;6M and improved ROAS.
+                  ML-driven image selection boosted conversions, adding ~$17M in revenue.
+                GenAI tools were adopted by over 50% of partners on day one.</p>
+                <p>
+                In January 2025, we launched the Ads Portal ecosystem to the first cohort, completing a complex migration within a year. This project transformed Expedia's advertising capabilities becoming one of four primary focus areas.</p>
+              </div>
+            </section>
+          </li>
+
+          <li class="p20">
+            <div class="close"></div>
+            <section class="head line" id="head_p20">
+              <div class="gallery reveal">
+                <div class="rhombus"></div>
+              </div>
+              <div class="description reveal">
+                <h2>Affiliates</h2>
+                <div class="tags">
+                  <span class="tag">Travel</span>
+                  <span class="tag">Affiliate</span>
+                  <span class="tag">E-commerce</span>
+                  <span class="tag">Growth</span>
+                  <span class="tag">Strategy</span>
+                  <span class="tag">B2B</span>
+                  <span class="tag">B2B2C</span>
+                </div>
+                <p class="datetime">
+                  <abbr class="timeago" title="2024-02-15">Feb 15, 2024</abbr> | Expedia
+                  <a href="#" class="learnmore">Learn more</a>
+                </p>
+              </div>
+            </section>
+            <section class="details hidden line">
+              <div class="gallery">
+                <p><a href="https://affiliates.expediagroup.com/home" target="_blank">View page</a></p> 
+              </div>
+              <div class="description">
+                <h5>Discovery</h5>
+                <p>The goal was clear: turn travelers into content creators and brand advocates, unlocking growth for Expedia's $640M Affiliates Program. I began by aligning with stakeholders to define objectives and conducted generative research to understand the pain points of both travelers and partners. Analyzing existing data and consulting domain experts, I identified opportunities to expand the program while assessing risks, particularly around integrating affiliate tools directly into traveler portals. This phase laid the groundwork for a strategy that balanced innovation with practicality.</p>
+                <h5>Solution</h5>
+                <p>With a clear vision, I led cross-functional workshops to explore solutions. The focus was on redesigning the Affiliate Portal to simplify onboarding and embedding affiliate tools seamlessly into the traveler experience. This approach ensured tools were available exactly when users needed them, enhancing engagement without disrupting their journey. I worked closely with leadership to refine the go-to-market plan, ensuring alignment and buy-in across the organization. Evaluative research helped validate the approach, confirming its potential to scale.</p>
+                <h5>Validation</h5>
+                <p>The redesigned Affiliate portal launched successfully, onboarding ~600 partners within six months and surpassing all growth targets. A/B testing validated the effectiveness of embedded tools, showing they not only improved the traveler experience but also drove higher engagement. Behind the scenes, a robust tech architecture was built to support the program's rapid growth, ensuring long-term scalability. This project demonstrated my ability to blend product leadership, business strategy, and customer-centric innovation to deliver measurable results.</p>
+              </div>
+            </section>
+          </li>
+
+          <li class="p19">
+            <div class="close"></div>
+            <section class="head line" id="head_p19">
+              <div class="gallery reveal">
+                <div class="rhombus"></div>
+              </div>
+              <div class="description reveal">
+                <h2>Loyalty program</h2>
+                <div class="tags">
+                  <span class="tag">Travel</span>
+                  <span class="tag">Loyalty</span>
+                  <span class="tag">E-commerce</span>
+                  <span class="tag">Growth</span>
+                  <span class="tag">Marketing</span>
+                  <span class="tag">Strategy</span>
+                  <span class="tag">B2B2C</span>
+                </div>
+                <p class="datetime">
+                  <abbr class="timeago" title="2023-10-01">October 1, 2023</abbr> | Expedia
+                  <a href="#" class="learnmore">Learn more</a>
+                </p>
+              </div>
+            </section>
+            <section class="details hidden line">
+              <div class="gallery">
+                <a rel="p19" href="./images/projects/VIPA-0-before.png" title="" class="swipebox">
+                  <img src="./images/projects/thumbs/VIPA-0-before_thumb.png" class="thumb animated fadeIn" />
+                </a>
+                <a rel="p19" href="./images/projects/VIPA-1-during.png" title="" class="swipebox">
+                  <img src="./images/projects/thumbs/VIPA-1-during_thumb.png" class="thumb animated fadeIn" />
+                </a>
+                <a rel="p19" href="./images/projects/VIPA-2-after.png" title="" class="swipebox">
+                  <img src="./images/projects/thumbs/VIPA-2-after_thumb.png" class="thumb animated fadeIn" />
+                </a>
+                <p><a href="https://partner.expediagroup.com/en-us/industries/hotels/vip-access-program" target="_blank">View article</a></p>
+              </div>
+              <div class="description">
+                <h5>Discovery</h5>
+                <p>Expedia's loyalty program was fragmented across multiple brands, creating a complex and disjointed experience for customers. I co-led the effort to redefine this program, aiming to consolidate offerings into a single, customer-friendly experience. Early on, I spotted the need for ecosystem and service alignment across the organization, breaking through silos to ensure a cohesive strategy. My team embedded deeply to understand the potential impact on both travelers and suppliers, conducting extensive research and aligning with stakeholders from marketing, sales, account management, legal, and analytics. This groundwork revealed an opportunity to start with pricing and cashback benefits, laying the foundation for a phased rollout.</p>
+                <h5>Solution</h5>
+                <p>The first phase focused on integrating pricing and cashback benefits for travelers and suppliers. I spearheaded the strategy, crafting executive pitches and gathering cross-functional feedback to refine the approach. We devised a step-by-step plan, starting with bundling traveler benefits like member discounts and cashback, with plans to expand to VIP perks later. On the traveler side, I led a fast-tracked project to ensure visibility of these benefits without compromising existing business metrics. This required careful balancing&#8212;delivering value quickly while maintaining performance across the board.</p>
+                <h5>Validation</h5>
+                <p>The launch exceeded expectations. The unified loyalty program drove a 40% revenue increase, adding $205M in value, while member-discount adoption rose by 12%. On the traveler side, retention grew by 7%, and all critical business metrics remained unaffected. This success validated the strategy of starting small, aligning the ecosystem, and scaling thoughtfully. My ability to navigate organizational complexity, lead cross-functional teams, and deliver customer-centric solutions was key to this outcome.</p>
+              </div>
+            </section>
+          </li>
+
+          <li class="p18">
+            <div class="close"></div>
+            <section class="head line" id="head_p18">
+              <div class="gallery reveal">
+                <div class="rhombus"></div>
+              </div>
+              <div class="description reveal">
+                <h2>Analytics and coaching</h2>
+                <div class="tags">
+                  <span class="tag">Travel</span>
+                  <span class="tag">Data</span>
+                  <span class="tag">AI/ML</span>
+                  <span class="tag">Finance</span>
+                  <span class="tag">Strategy</span>
+                  <span class="tag">Mobile</span>
+                  <span class="tag">B2B</span>
+                  <span class="tag">B2B2C</span>
+                </div>
+                <p class="datetime">
+                  <abbr class="timeago" title="2022-04-01">April 1, 2022</abbr> | Expedia
+                  <a href="#" class="learnmore">Learn more</a>
+                </p>
+              </div>
+            </section>
+            <section class="details hidden line">
+              <div class="gallery">
+                <a rel="p18" href="./images/projects/analytics-1-NS.png" title="" class="swipebox">
+                  <img src="./images/projects/thumbs/analytics-1-NS_thumb.png" class="thumb animated fadeIn" />
+                </a>
+                <a rel="p18" href="./images/projects/analytics-2.png" title="" class="swipebox">
+                  <img src="./images/projects/thumbs/analytics-2-compset_thumb.png" class="thumb animated fadeIn" />
+                </a>
+                <a rel="p18" href="./images/projects/analytics-3.png" title="" class="swipebox">
+                  <img src="./images/projects/thumbs/analytics-3_thumb.png" class="thumb animated fadeIn" />
+                </a>
+              </div>
+              <div class="description">
+                <h5>Discovery</h5>
+                <p>Our analytics tools had become overly complex, sprawling across 20 different pages developed tactically over the years. Despite Expedia's data being a significant competitive advantage, we received consistent feedback about a subpar user experience. To secure investment, we needed a product strategy with a clear attribution model.</p>
+                <h5>Solution</h5>
+                <p>We developed a data storytelling model that introduced problems through data visualizations and offered partners actionable steps to address identified market gaps. This approach transformed the experience into a virtual coach, assisting partners in setting and achieving goals. Our machine learning engine provided personalized data insights and proof points, tailoring actions to each partner's needs.</p>
+                <h5>Validation</h5>
+                <p>Our proof of concept achieved a record 14% conversion throughout the partner journey, convincing leadership of our approach. We then built a scalable solution focusing on omnichannel coaching through account representatives, marketing activities, and self-serve experiences. Over time, we streamlined and replaced older experiences, eventually positioning the coaching feature prominently on the product's homepage. This initiative resulted in $120M in revenue in the first year and a 10.2% market penetration.</p>
+              </div>
+            </section>
+          </li>
+
+          <li class="p17">
+            <div class="close"></div>
+            <section class="head line" id="head_p17">
+              <div class="gallery reveal">
+                <div class="rhombus"></div>
+              </div>
+              <div class="description reveal">
+                <h2>Pricing automation</h2>
+                <div class="tags">
+                  <span class="tag">Travel</span>
+                  <span class="tag">Data</span>
+                  <span class="tag">AI/ML</span>
+                  <span class="tag">Finance</span>
+                  <span class="tag">Strategy</span>
+                  <span class="tag">B2B</span>
+                </div>
+                <p class="datetime">
+                  <abbr class="timeago" title="2020-04-01">April 1, 2020</abbr> | Expedia
+                  <a href="#" class="learnmore">Learn more</a>
+                </p>
+              </div>
+            </section>
+            <section class="details hidden line">
+              <div class="gallery">
+                <p><a href="https://partner.expediagroup.com/en-us/resources/case-studies/hotel-drives-bookings-with-rate-match-automation" target="_blank">View article</a></p>
+              </div>
+              <div class="description">
+                <h5>Discovery</h5>
+                <p>Apologies, this is a work in progress</p>
+                <h5>Solution</h5>
+                <p></p>
+                <h5>Validation</h5>
+                <p></p>
+              </div>
+            </section>
+          </li>
+
+          <li class="p16">
+            <div class="close"></div>
+            <section class="head line" id="head_p16">
+              <div class="gallery reveal">
+                <div class="rhombus"></div>
+              </div>
+              <div class="description reveal">
+                <h2>Revenue management</h2>
+                <div class="tags">
+                  <span class="tag">Travel</span>
+                  <span class="tag">Data</span>
+                  <span class="tag">AI/ML</span>
+                  <span class="tag">Finance</span>
+                  <span class="tag">Strategy</span>
+                  <span class="tag">B2B</span>
+                </div>
+                <p class="datetime">
+                  <abbr class="timeago" title="2019-06-01">June 1, 2019</abbr> | Expedia
+                  <a href="#" class="learnmore">Learn more</a>
+                </p>
+              </div>
+            </section>
+            <section class="details hidden line">
+              <div class="gallery">
+                <p><a href="https://partner.expediagroup.com/en-us/resources/case-studies/vacation-rental-owner-builds-occupancy-with-marketmaker" target="_blank">View article</a></p>
+              </div>
+              <div class="description">
+                <h5>Discovery</h5>
+                <p>Our free revenue management tool, dependent on active visits, allowed supply partners, be it small vacation rentals or large hotel chains, to monitor competitors' pricing and adjust accordingly. However, engagement was declining due to the strong competitive advantage of paid tools. The platform was built on an outdated stack, leading to a bloated user experience. Partners expressed frustration, yet those who used it reported a 12% revenue uplift.</p>
+                <h5>Solution</h5>
+                <p> Deciding to simplify the experience, we removed underused features, even at the risk of some revenue loss. The new platform offered real-time competitive insights akin to financial services. Within a year, most users voluntarily switched to the new experience and utilized market occupancy forecasts from our data science team. Our machine learning engine provided pricing adjustment recommendations with a 20% pitch-to-act conversion, marking a clear commercial success.</p>
+                <h5>Validation</h5>
+                <p>We released the MVP alongside existing systems to track adoption and optimize feature readiness. Conducting iterative testing and behavioral analysis, we improved ML-driven recommendations. Establishing a framework for ongoing optimization, we unlocked future product growth opportunities. This initiative resulted in a 25% increase in monthly active users and a 7% boost in partner revenue. Additionally, we renamed the product based on user feedback, resulting in an additional 17% engagement.</p>
+              </div>
+            </section>
+          </li>
+
+          <li class="p15">
+            <div class="close"></div>
+            <section class="head line" id="head_p15">
+              <div class="gallery reveal">
+                <div class="rhombus"></div>
+              </div>
+              <div class="description reveal">
+                <h2>Doodle Design System</h2>
+                <div class="tags">
+                  <span class="tag">Marketing</span>
+                  <span class="tag">Ops</span>
+                  <span class="tag">Craft</span>
+                  <span class="tag">Strategy</span>
+                  <span class="tag">Mobile</span>
+                </div>
+                <p class="datetime">
+                  <abbr class="timeago" title="2018-03-01">March 1, 2018</abbr> | Doodle
+                  <a href="#" class="learnmore">Learn more</a>
+                </p>
+              </div>
+            </section>
+            <section class="details hidden scribble">
+              <div class="gallery">
+                <a rel="p13" href="./images/projects/DDS1.jpg" title="">
+                  <img src="./images/projects/thumbs/DDS1_thumb.jpg" class="thumb animated fadeIn" />
+                </a>
+                <a rel="p13" href="./images/projects/DDS2.jpg" title="">
+                  <img src="./images/projects/thumbs/DDS2_thumb.jpg" class="thumb animated fadeIn" />
+                </a>
+                <a rel="p13" href="./images/projects/DDS3.jpg" title="">
+                  <img src="./images/projects/thumbs/DDS3_thumb.jpg" class="thumb animated fadeIn" />
+                </a>
+                <a rel="p13" href="./images/projects/DDS4.jpg" title="">
+                  <img src="./images/projects/thumbs/DDS4_thumb.jpg" class="thumb animated fadeIn" />
+                </a>
+                <a rel="p13" href="./images/projects/DDS5.jpg" title="">
+                  <img src="./images/projects/thumbs/DDS5_thumb.jpg" class="thumb animated fadeIn" />
+                </a>
+                <p><a href="https://href.li/?https://doodle.com/styleguide" target="_blank">View live</a></p>
+              </div>
+              <div class="description">
+                <h5>Discovery</h5>
+                <p>Doodle's design (indirectly users) was struggling with a lot of design debt: inconsistent interactions and visual elements, no brand identity, nor coherent UX copywriting. This was showing specifically in the development process where a lot of one-off solutions were introduced on a daily basis.</p>
+                <div class="inline-gallery clearfix">
+                  <a rel="p13_1" href="./images/projects/DDS1.jpg" title="">
+                    <img src="./images/projects/thumbs/DDS1_thumb.jpg" class="thumb animated fadeIn" />
+                  </a>
+                </div>
+                <h5>Solution</h5>
+                <p>The Doodle design system (DDS) was born. A unifying set of tools for the entire organization, based on three pillars: brand assets, interaction patterns and principles, and front-end components.</p>
+                <div class="inline-gallery clearfix">
+                  <a rel="p13_2" href="./images/projects/DDS2.jpg" title="">
+                    <img src="./images/projects/thumbs/DDS2_thumb.jpg" class="thumb animated fadeIn" />
+                  </a>
+                  <a rel="p13_2" href="./images/projects/DDS3.jpg" title="">
+                    <img src="./images/projects/thumbs/DDS3_thumb.jpg" class="thumb animated fadeIn" />
+                  </a>
+                </div>
+                <p>DDS is enabling designers and non-designers to make more confident decisions when building products without compromising on interaction consistency or accessibility. This increased confidence allowed for a broader view, leading to less "spec talk" and more "UX talk" across entire production team.</p>
+                <div class="inline-gallery clearfix">
+                  <a rel="p13_3" href="./images/projects/DDS4.jpg" title="">
+                    <img src="./images/projects/thumbs/DDS4_thumb.jpg" class="thumb animated fadeIn" />
+                  </a>
+                  <a rel="p13_3" href="./images/projects/DDS5.jpg" title="">
+                    <img src="./images/projects/thumbs/DDS5_thumb.jpg" class="thumb animated fadeIn" />
+                  </a>
+                </div>
+                <p>We've set up version controlled UX/UI kit, broken down into separate libraries (Core, Forms, Layouts). With the system in place, we built a process to support both innovation and optimization design workflows.</p>
+                <p>The most challenging part is agreeing on changes that eventually make it to the front-end. Formulating design principles upfront made it a cakewalk.</p>
+              </div>
+            </section>
+          </li>
+          <li class="p14">
+            <div class="close"></div>
+            <section class="head line" id="head_p14">
+              <div class="gallery reveal">
+                <div class="rhombus"></div>
+              </div>
+              <div class="description reveal">
+                <h2>Doodle: group scheduling redesign</h2>
+                <div class="tags">
+                  <span class="tag">Craft</span>
+                  <span class="tag">Advertising</span>
+                  <span class="tag">Marketing</span>
+                  <span class="tag">B2C</span>
+                  <span class="tag">Strategy</span>
+                  <span class="tag">Mobile</span>
+                  <span class="tag">Loyalty</span>
+                </div>
+                <p class="datetime">
+                  <abbr class="timeago" title="2017-09-01">September 1, 2017</abbr> | Doodle
+                  <a href="#" class="learnmore">Learn more</a>
+                </p>
+              </div>
+            </section>
+            <section class="details hidden scribble">
+              <div class="gallery">
+                <a rel="p14" href="./images/projects/Doodle1.jpg" title="Old Doodle homepage">
+                  <img src="./images/projects/thumbs/Doodle1_thumb.jpg" class="thumb animated fadeIn" />
+                </a>
+                <a rel="p14" href="./images/projects/Doodle2.jpg" title="Redesigned Doodle homepage">
+                  <img src="./images/projects/thumbs/Doodle2_thumb.jpg" class="thumb animated fadeIn" />
+                </a>
+                <a rel="p14" href="./images/projects/Doodle3.jpg" title="Mobile version of the poll setup">
+                  <img src="./images/projects/thumbs/Doodle3_thumb.jpg" class="thumb animated fadeIn" />
+                </a>
+                <a rel="p14" href="./images/projects/Doodle4.jpg" title="Redesign user journey map">
+                  <img src="./images/projects/thumbs/Doodle4_thumb.jpg" class="thumb animated fadeIn" />
+                </a>
+                <a rel="p14" href="./images/projects/Doodle5.jpg" title="Redesigned calendar view">
+                  <img src="./images/projects/thumbs/Doodle5_thumb.jpg" class="thumb animated fadeIn" />
+                </a>
+                <a rel="p14" href="./images/projects/Doodle6.jpg" title="Redesigned white-label Doodle">
+                  <img src="./images/projects/thumbs/Doodle6_thumb.jpg" class="thumb animated fadeIn" />
+                </a>
+                <p><a href="https://href.li/?https://Doodle.com" target="_blank">View live site</a></p>
+              </div>
+              <div class="description">
+                <h5>Discovery</h5>
+                <p>I joined Doodle to help with product redesign in the making for a year. I had to map out the history of design decisions and adapt so I won't slow the redesign process any further. Furthermore, mobile experience was not considered! In order to maintain the Doodle's renowned UX status, I had to come up with a plan.</p>
+                <div class="inline-gallery clearfix">
+                  <a rel="p14_1" href="./images/projects/Doodle1.jpg" title="Old Doodle homepage">
+                    <img src="./images/projects/thumbs/Doodle1_thumb.jpg" class="thumb animated fadeIn" />
+                  </a>
+                  <a rel="p14_1" href="./images/projects/Doodle2.jpg" title="Redesigned Doodle homepage">
+                    <img src="./images/projects/thumbs/Doodle2_thumb.jpg" class="thumb animated fadeIn" />
+                  </a>
+                </div>
+                <h5>Solution</h5>
+                <p>Countless hours of exploration, documentation browsing, user research, and tech support shifts helped me understand main user-friction points. Small changes with big impact resulted in quick wins. I could finally focus on the big picture design strategy.</p>
+                <div class="inline-gallery clearfix">
+                  <a rel="p14_2" href="./images/projects/Doodle3.jpg" title="Mobile version of the poll setup">
+                    <img src="./images/projects/thumbs/Doodle3_thumb.jpg" class="thumb animated fadeIn" />
+                  </a>
+                  <a rel="p14_2" href="./images/projects/Doodle4.jpg" title="Redesign user journey map">
+                    <img src="./images/projects/thumbs/Doodle4_thumb.jpg" class="thumb animated fadeIn" />
+                  </a>
+                </div>
+                <p>I chose gradual improvements approach rather than revolutionary one. This resulted in a lot more design confidence as each of the decisions were backed by user research or data analysis. My most impactful designs are responsive "Doodle table" &ndash; a notoriously known interface element &ndash; and a calendar view.</p>
+                <div class="inline-gallery clearfix">
+                  <a rel="p14_3" href="./images/projects/Doodle5.jpg" title="Redesigned calendar view">
+                    <img src="./images/projects/thumbs/Doodle5_thumb.jpg" class="thumb animated fadeIn" />
+                  </a>
+                  <a rel="p14_3" href="./images/projects/Doodle6.jpg" title="Redesigned white-label Doodle">
+                    <img src="./images/projects/thumbs/Doodle6_thumb.jpg" class="thumb animated fadeIn" />
+                  </a>
+                </div>
+                <p>Doodle is seeing 15-20% growth after global launch of the my co-authored redesign peaking at some 25MAU. The user reviews went up by ~14% over the course of 3 months after the global launch (reaching 4/5 score). Conversion on the desktop went up by 8% but mobile grew by almost 30%.</p>
+              </div>
+            </section>
+          </li>
+          <li class="p13">
+            <div class="close"></div>
+            <section class="head line" id="head_p13">
+              <div class="gallery reveal">
+                <div class="rhombus"></div>
+              </div>
+              <div class="description reveal">
+                <h2>Widerfunnel.com</h2>
+                <div class="tags">
+                  <span class="tag">Craft</span>
+                  <span class="tag">Ops</span>
+                  <span class="tag">Marketing</span>
+                  <span class="tag">B2B</span>
+                  <span class="tag">Strategy</span>
+                  <span class="tag">Sales</span>
+                </div>
+                <p class="datetime">
+                  <abbr class="timeago" title="2015-10-06">October 6, 2015</abbr> | WiderFunnel
+                  <a href="#" class="learnmore">Learn more</a>
+                </p>
+              </div>
+            </section>
+            <section class="details hidden scribble">
+              <div class="gallery">
+                <a rel="p13" href="./images/projects/widerfunnel.com1.jpg" title="Blog page wireframe (viewport of 1920px)">
+                  <img src="./images/projects/thumbs/widerfunnel.com1_thumb.jpg" class="thumb animated fadeIn" />
+                </a>
+                <a rel="p13" href="./images/projects/widerfunnel.com2.jpg" title="Blog page wireframe (viewport of 320px)">
+                  <img src="./images/projects/thumbs/widerfunnel.com2_thumb.jpg" class="thumb animated fadeIn" />
+                </a>
+                <a rel="p13" href="./images/projects/widerfunnel.com3.jpg" title="Homepage (viewport of 1920px)">
+                  <img src="./images/projects/thumbs/widerfunnel.com3_thumb.jpg" class="thumb animated fadeIn" />
+                </a>
+                <a rel="p13" href="./images/projects/widerfunnel.com4.jpg" title="Homepage (viewport of 480px)">
+                  <img src="./images/projects/thumbs/widerfunnel.com4_thumb.jpg" class="thumb animated fadeIn" />
+                </a>
+                <a rel="p13" href="./images/projects/widerfunnel.com5.jpg" title="Experts (viewport of 1920px)">
+                  <img src="./images/projects/thumbs/widerfunnel.com5_thumb.jpg" class="thumb animated fadeIn" />
+                </a>
+                <p><a href="https://href.li/?https://widerfunnel.com" target="_blank">View live site</a></p>
+              </div>
+              <div class="description">
+                <h5>Discovery</h5>
+                <p>Having its last redesign in 2008 Widerfunnel's website was becoming dated. On top of that, the clunky infrastructure prevented editing both content and visuals.</p>
+                <div class="inline-gallery clearfix">
+                  <a rel="p13_1" href="./images/projects/widerfunnel.com1.jpg" title="Blog page wireframe (viewport of 1920px)">
+                    <img src="./images/projects/thumbs/widerfunnel.com1_thumb.jpg" class="thumb animated fadeIn" />
+                  </a>
+                  <a rel="p13_1" href="./images/projects/widerfunnel.com2.jpg" title="Blog page wireframe (viewport of 320px)">
+                    <img src="./images/projects/thumbs/widerfunnel.com2_thumb.jpg" class="thumb animated fadeIn" />
+                  </a>
+                </div>
+                <p>Problems were not just technical; my task was to create website that is data-driven as a proof of concept with well organized and editable content allowing simple optimization tweaks in the future at the the same time.</p>
+                <h5>Solution</h5>
+                <p>Brad Frost's <a href="https://bradfrost.com/blog/post/atomic-web-design/" target="_blank">atomic design</a> approach struck me as a perfect fit for the problems outlined and a great way how to incorporate UX strategy onwards. I started with information architecture based on modules that were easy to shift around and reuse whenever needed and conducted qualitative research&#8212;benchmark tests and open card sort. All in a lean fashion - fast tests and even faster analysis.</p>
+                <div class="inline-gallery clearfix">
+                  <a rel="p13_2" href="./images/projects/widerfunnel.com3.jpg" title="Homepage (viewport of 1920px)">
+                    <img src="./images/projects/thumbs/widerfunnel.com3_thumb.jpg" class="thumb animated fadeIn" />
+                  </a>
+                  <a rel="p13_2" href="./images/projects/widerfunnel.com4.jpg" title="Homepage (viewport of 480px)">
+                    <img src="./images/projects/thumbs/widerfunnel.com4_thumb.jpg" class="thumb animated fadeIn" />
+                  </a>
+                </div>
+                <p>Content audit resulted in more than 70% of the pages being removed. Exploration of the site content skyrocketed.</p>
+                <div class="inline-gallery clearfix">
+                  <a rel="p13_3" href="./images/projects/widerfunnel.com5.jpg" title="Experts (viewport of 1920px)">
+                    <img src="./images/projects/thumbs/widerfunnel.com5_thumb.jpg" class="thumb animated fadeIn" />
+                  </a>
+                </div>
+                <p>Results were astonishing! Even the barebone design with missing animations and also some of the basic functionality on launch outperformed the original website. And this was just a beginning for the future to come as the platform allows a lot of modifications without ruining the experience.</p>
+              </div>
+            </section>
+          </li>
+          <li class="p12">
+            <div class="close"></div>
+            <section class="head line" id="head_p12">
+              <div class="gallery reveal">
+                <div class="rhombus"></div>
+              </div>
+              <div class="description reveal">
+                <h2>Brand guide</h2>
+                <div class="tags">
+                  <span class="tag">Craft</span>
+                  <span class="tag">Ops</span>
+                  <span class="tag">Marketing</span>
+                  <span class="tag">A/B test</span>
+                </div>
+                <p class="datetime">
+                  <abbr class="timeago" title="2015-08-01">August 1, 2015</abbr> | WiderFunnel
+                  <a href="#" class="learnmore">Learn more</a>
+                </p>
+              </div>
+            </section>
+            <section class="details hidden scribble">
+              <div class="gallery">
+                <a rel="p12" href="./images/projects/brand-guide1.jpg" title="Brand guide - main colours.">
+                  <img src="./images/projects/thumbs/brand-guide1_thumb.jpg" class="thumb animated fadeIn" />
+                </a>
+                <a rel="p12" href="./images/projects/brand-guide2.jpg" title="Brand guide - how to showcase long page screenshots.">
+                  <img src="./images/projects/thumbs/brand-guide2_thumb.jpg" class="thumb animated fadeIn" />
+                </a>
+                <a rel="p12" href="./images/projects/brand-guide3.jpg" title="Brand guide - mock-ups and devices.">
+                  <img src="./images/projects/thumbs/brand-guide3_thumb.jpg" class="thumb animated fadeIn" />
+                </a>
+                <a rel="p12" href="./images/projects/brand-guide4.jpg" title="Brand guide - example document.">
+                  <img src="./images/projects/thumbs/brand-guide4_thumb.jpg" class="thumb animated fadeIn" />
+                </a>
+                <a rel="p12" href="./images/projects/brand-guide5.jpg" title="Brand guide - wired diagram.">
+                  <img src="./images/projects/thumbs/brand-guide5_thumb.jpg" class="thumb animated fadeIn" />
+                </a>
+                <a rel="p12" href="./images/projects/brand-guide6.jpg" title="Brand guide - infinity diagram. A process diagram I've created in collaboration with WIderFunnel's CEO Chris Goward.">
+                  <img src="./images/projects/thumbs/brand-guide6_thumb.jpg" class="thumb animated fadeIn" />
+                </a>
+              </div>
+              <div class="description">
+                <h5>Discovery</h5>
+                <p>WiderFunnel was missing consistency in the way the company communicated. Ranging from print materials, digital campaigns, through the tone of voice and messaging. "Brace yourself, brand guide is coming!". The guide needed to solve specific problem of presenting A/B test variations and results and process related questions.</p>
+                <div class="inline-gallery clearfix">
+                  <a rel="p12_1" href="./images/projects/brand-guide1.jpg" title="Brand guide - main colours.">
+                    <img src="./images/projects/thumbs/brand-guide1_thumb.jpg" class="thumb animated fadeIn" />
+                  </a>
+                  <a rel="p12_1" href="./images/projects/brand-guide2.jpg" title="Brand guide - how to showcase long page screenshots.">
+                    <img src="./images/projects/thumbs/brand-guide2_thumb.jpg" class="thumb animated fadeIn" />
+                  </a>
+                </div>
+                <h5>Solution</h5>
+                <p>First outline and layout of the brand guide document was devised by <a href="https://ca.linkedin.com/in/youmichoi" target="_blank">Youmi</a>, senior designer, under marketing director's guidance. I joined the project in a role of art director and later I took over the role of creating the guidelines themselves.</p>
+                <div class="inline-gallery clearfix">
+                  <a rel="p12_2" href="./images/projects/brand-guide3.jpg" title="Brand guide - mock-ups and devices.">
+                    <img src="./images/projects/thumbs/brand-guide3_thumb.jpg" class="thumb animated fadeIn" />
+                  </a>
+                  <a rel="p12_2" href="./images/projects/brand-guide4.jpg" title="Brand guide - example document.">
+                    <img src="./images/projects/thumbs/brand-guide4_thumb.jpg" class="thumb animated fadeIn" />
+                  </a>
+                </div>
+                <p>Resulting document contains more than 90 pages of wonderful presentations of design system that is specificaly designed for better undertsanding of conversion rate optimization process and a better way to showcase results of this process.</p>
+                <div class="inline-gallery clearfix">
+                  <a rel="p12_3" href="./images/projects/brand-guide5.jpg" title="Brand guide - wired diagram.">
+                    <img src="./images/projects/thumbs/brand-guide5_thumb.jpg" class="thumb animated fadeIn" />
+                  </a>
+                  <a rel="p12_3" href="./images/projects/brand-guide6.jpg" title="Brand guide - infinity diagram. A process diagram I've created in collaboration with WIderFunnel's CEO Chris Goward.">
+                    <img src="./images/projects/thumbs/brand-guide6_thumb.jpg" class="thumb animated fadeIn" />
+                  </a>
+                </div>
+              </div>
+            </section>
+          </li>
+          <li class="p11">
+            <div class="close"></div>
+            <section class="head line" id="head_p11">
+              <div class="gallery reveal">
+                <div class="rhombus"></div>
+              </div>
+              <div class="description reveal">
+                <h2>Design process optimization</h2>
+                <div class="tags">
+                  <span class="tag">Ops</span>
+                  <span class="tag">Strategy</span>
+                </div>
+                <p class="datetime">
+                  <abbr class="timeago" title="2015-04-15">April 15, 2015</abbr> | WiderFunnel
+                  <a href="#" class="learnmore">Learn more</a>
+                </p>
+              </div>
+            </section>
+            <section class="details hidden scribble">
+              <div class="gallery">
+              </div>
+              <div class="description">
+                <h5>Discovery</h5>
+                <p>Two new designers joined our team and I quickly realized there's a whole new set of responsibilities and problems that need my attention. Currently established design process does not scale well.</p>
+                <p>I have mapped out our processes and highlighted areas for improvement. Starting from processes that I could estabilish internally: hiring process, new hires on-boarding and automating repetitive tasks.</p>
+                <h5>Solution</h5>
+                <p>Firstly, I have polished the hiring process for designers - starting with the list of skills that are best suited for tasks to be done in their future role, estabilishing hiring exercise and the interview goals.</p>
+                <p>Secondly, the new hires on-boarding covers current state of desing in the company, organization of files, time tracking and tips for more efficient use of tools.</p>
+                <p>Lastly, I have identified frustrating aspects of design workflow: exporting assets from Photoshop and naming conventions and streamlined these into one-click solution eliminating the time spent on exporting assets from our time-tracking entirely.</p>
+              </div>
+            </section>
+          </li>
+
+          <!-- Project 8 -->
+          <li class="p10">
+            <div class="close"></div>
+            <section class="head line" id="head_p10">
+              <div class="gallery reveal">
+                <div class="rhombus"></div>
+              </div>
+              <div class="description reveal">
+                <h2>Draft team: fantasy sports</h2>
+                <div class="tags">
+                  <span class="tag">Craft</span>
+                  <span class="tag">Marketing</span>
+                  <span class="tag">Gaming</span>
+                  <span class="tag">Mobile</span>
+                </div>
+                <p class="datetime">
+                  <abbr class="timeago" title="2014-06-01">June 01, 2014</abbr> | Patternly
+                  <a href="#" class="learnmore">Learn more</a>
+                </p>
+              </div>
+            </section>
+            <section class="details hidden scribble">
+              <div class="gallery">
+                <a rel="p10" href="./images/projects/draftteam0.png" title="This is a hybrid between screenflow and user journey. It's a tool that I use to simplify the way I think about information to be conveyed to users at that specific moment.">
+                  <img src="./images/projects/thumbs/draftteam0_thumb.png" class="thumb animated fadeIn" />
+                </a>
+                <a rel="p10" href="./images/projects/draftteam1.0.jpg" title="Log in / Sign up wireframe.">
+                  <img src="./images/projects/thumbs/draftteam1.0_thumb.jpg" class="thumb animated fadeIn" />
+                </a>
+                <a rel="p10" href="./images/projects/draftteam1.1.jpg" title="Login in / Sign up mock-up.">
+                  <img src="./images/projects/thumbs/draftteam1.1_thumb.jpg" class="thumb animated fadeIn" />
+                </a>
+                <a rel="p10" href="./images/projects/draftteam2.0.jpg" title="This is a screen where users draft their players for their respective positions. This is a great place for sport field metaphor.">
+                  <img src="./images/projects/thumbs/draftteam2.0_thumb.jpg" class="thumb animated fadeIn" />
+                </a>
+                <a rel="p10" href="./images/projects/draftteam2.1.jpg" title="Football field mock-up with options to draft athletes.">
+                  <img src="./images/projects/thumbs/draftteam2.1_thumb.jpg" class="thumb animated fadeIn" />
+                </a>
+                <a rel="p10" href="./images/projects/draftteam3.0.jpg" title="Same rules can be applied to any other sport. As seen for baseball on this wireframe.">
+                  <img src="./images/projects/thumbs/draftteam3.0_thumb.jpg" class="thumb animated fadeIn" />
+                </a>
+                <a rel="p10" href="./images/projects/draftteam3.1.jpg" title="Baseball field mock-up with options to draft athletes.">
+                  <img src="./images/projects/thumbs/draftteam3.1_thumb.jpg" class="thumb animated fadeIn" />
+                </a>
+                <a rel="p10" href="./images/projects/draftteam4.0.jpg" title="This is the 'home' screen wireframe - place where you can filter and pick a sport you are interested in.">
+                  <img src="./images/projects/thumbs/draftteam4.0_thumb.jpg" class="thumb animated fadeIn" />
+                </a>
+                <a rel="p10" href="./images/projects/draftteam4.1.jpg" title="Mock-up allowed me make this part of the app a lot more desirable by addition of sport-related photos in the background and dinstinctive colour-coding.">
+                  <img src="./images/projects/thumbs/draftteam4.1_thumb.jpg" class="thumb animated fadeIn" />
+                </a>
+              </div>
+              <div class="description">
+                <h5>Discovery</h5>
+                <p>Patternly approached me to design a game interface that is explaining the concept of fantasy sports in a simple manner as the onboarding players had trouble realizing the mechanics. The most troublesome part was missing user research and absolutely no time or budget to conduct one. I had to improvise and get some research going.</p>
+                <div class="inline-gallery clearfix">
+                  <a rel="p10_1" href="./images/projects/draftteam0.png" title="This is a hybrid between screenflow and user journey. It's a tool that I use to simplify the way I think about information to be conveyed to users at that specific moment.">
+                    <img src="./images/projects/thumbs/draftteam0_thumb.png" class="thumb animated fadeIn" />
+                  </a>
+                </div>
+                <h5>Solution</h5>
+                <div class="inline-gallery clearfix">
+                  <a rel="p10_2" href="./images/projects/draftteam1.0.jpg" title="Log in / Sign up wireframe.">
+                    <img src="./images/projects/thumbs/draftteam1.0_thumb.jpg" class="thumb animated fadeIn" />
+                  </a>
+                  <a rel="p10_2" href="./images/projects/draftteam1.1.jpg" title="Login in / Sign up mock-up.">
+                    <img src="./images/projects/thumbs/draftteam1.1_thumb.jpg" class="thumb animated fadeIn" />
+                  </a>
+                </div>
+                <p>I had started with competitive research and benchmark testing. The results were adequate to kick off the ideation / sketching phase. High level info architecture informed dev team about the structure so they could start crunching through the code while I was figuring out the rest of more detailed interactions.</p>
+                <div class="inline-gallery clearfix">
+                  <a rel="p10_3" href="./images/projects/draftteam2.0.jpg" title="This is a screen where users draft their players for their respective positions. This is a great place for sport field metaphor.">
+                    <img src="./images/projects/thumbs/draftteam2.0_thumb.jpg" class="thumb animated fadeIn" />
+                  </a>
+                  <a rel="p10_3" href="./images/projects/draftteam2.1.jpg" title="Football field mock-up with options to draft athletes.">
+                    <img src="./images/projects/thumbs/draftteam2.1_thumb.jpg" class="thumb animated fadeIn" />
+                  </a>
+                  <a rel="p10_3" href="./images/projects/draftteam3.0.jpg" title="Same rules can be applied to any other sport. As seen for baseball on this wireframe.">
+                    <img src="./images/projects/thumbs/draftteam3.0_thumb.jpg" class="thumb animated fadeIn" />
+                  </a>
+                  <a rel="p10_3" href="./images/projects/draftteam3.1.jpg" title="Baseball field mock-up with options to draft athletes.">
+                    <img src="./images/projects/thumbs/draftteam3.1_thumb.jpg" class="thumb animated fadeIn" />
+                  </a>
+                </div>
+                <p>I have devised a concept that lead to axonometric presentation of the field for each sport to better illustrate the metaphor of real games. This worked like a charm and boosted engagement incredibly. Company funding the project got acquired and the project is on hold ever since.</p>
+                <div class="inline-gallery clearfix">
+                  <a rel="p10_4" href="./images/projects/draftteam4.0.jpg" title="This is the 'home' screen wireframe - place where you can filter and pick a sport you are interested in.">
+                    <img src="./images/projects/thumbs/draftteam4.0_thumb.jpg" class="thumb animated fadeIn" />
+                  </a>
+                  <a rel="p10_4" href="./images/projects/draftteam4.1.jpg" title="Mock-up allowed me make this part of the app a lot more desirable by addition of sport-related photos in the background and dinstinctive colour-coding.">
+                    <img src="./images/projects/thumbs/draftteam4.1_thumb.jpg" class="thumb animated fadeIn" />
+                  </a>
+                </div>
+              </div>
+            </section>
+          </li>
+          <li class="p9">
+            <div class="close"></div>
+            <section class="head line" id="head_p9">
+              <div class="gallery reveal">
+                <div class="rhombus"></div>
+              </div>
+              <div class="description reveal">
+                <h2>DMV.org, Magento: A/B testing</h2>
+                <div class="tags">
+                  <span class="tag">Finance</span>
+                  <span class="tag">E-commerce</span>
+                  <span class="tag">B2C</span>
+                  <span class="tag">A/B test</span>
+                  <span class="tag">Data</span>
+                  <span class="tag">Marketing</span>
+                  <span class="tag">Sales</span>
+                </div>
+                <p class="datetime">
+                  <abbr class="timeago" title="2014-04-15">April 15, 2014</abbr> | WiderFunnel
+                  <a href="#" class="learnmore">Learn more</a>
+                </p>
+              </div>
+            </section>
+            <section class="details hidden scribble">
+              <div class="gallery">
+                <p><a href="https://www.widerfunnel.com/case_study/putting-ab-testing-to-the-test/" target="_blank">View DMV.org case study</a></p>
+                <p><a href="https://www.widerfunnel.com/case_study/magento/" target="_blank">View Magento case study</a></p>
+              </div>
+              <div class="description">
+                <h5>Discovery</h5>
+                <p>DMV and Magento are great examples of clients where I was in charge of user experience we delivered.</p>
+                <p>I was part of the production team and was communicating mainly with strategists who were responsible for research, analysis and hypotheses creation.</p>
+                <p>To get results from A/B test, you can't change a lot of things at the same time and as a designer you get easily frustrated by this "you can't touch this" approach. Yet focusing on results and learning what works and what doesn't motivated me to focus on divergent thinking.</p>
+                <h5>Solution</h5>
+                <p>For DMV.org we could only test changes to one small module. I had to push my limits and think of how many design variations can I come up with in collaboration with <a href="https://www.linkedin.com/in/alhankeser" target="_blank">Alhan Keser</a> and <a href="https://ca.linkedin.com/in/michaellstlaurent" target="_blank">Mike St Laurent</a>. I have created hundreds of designs of this single module and led my team to produce hundreds more later on. This resulted in overall 282.2% revenue increase over two years.</p>
+                <p>Magento had a different approach - we were allowed to change a lot more! I was responsible for initial tests on homepage and more radical changes on landing pages. Later on, super talented <a href="https://ca.linkedin.com/in/youmichoi" target="_blank">Youmi Choi</a> stepped in and took over project under my guidance.</p>
+                <p><a href="https://www.widerfunnel.com/case_study/putting-ab-testing-to-the-test/" class="learnmore" target="_blank">View DMV.org case study</a></p>
+                <p><a href="https://www.widerfunnel.com/case_study/magento/" class="learnmore" target="_blank">View Magento case study</a></p>
+              </div>
+            </section>
+          </li>
+          <li class="p8">
+            <div class="close"></div>
+            <section class="head line" id="head_p8">
+              <div class="gallery reveal">
+                <div class="rhombus"></div>
+              </div>
+              <div class="description reveal">
+                <h2>Speedometer: dashboard assistant</h2>
+                <div class="tags">
+                  <span class="tag">Maps</span>
+                  <span class="tag">Strategy</span>
+                  <span class="tag">B2C</span>
+                  <span class="tag">HCI</span>
+                </div>
+                <p class="datetime">
+                  <abbr class="timeago" title="2014-01-01">January 01, 2014</abbr> | Sygic
+                  <a href="#" class="learnmore">Learn more</a>
+                </p>
+              </div>
+            </section>
+            <section class="details hidden scribble">
+              <div class="gallery">
+                <a rel="p8" href="./images/projects/speedcam1.png" title="Final design by Jakub Antalik based on my concept.">
+                  <img src="./images/projects/thumbs/speedcam1_thumb.png" class="thumb animated fadeIn" />
+                </a>
+                <a rel="p8" href="./images/projects/speedcam2.gif" title="Interface animation.">
+                  <img src="./images/projects/thumbs/speedcam2_thumb.jpg" class="thumb animated fadeIn" />
+                </a>
+                <p><a href="https://www.sygic.com/speed-cameras/features" target="_blank">View on sygic.com</a></p>
+              </div>
+              <div class="description">
+                <h5>Discovery</h5>
+                <p class="ul">The idea to create a standalone product that was part of our main GPS navigation allowed me to facilitate 'gamestorming' sessions with other designers (<a href="https://www.linkedin.com/in/jakubantalik" target="_blank">Jakub Antalik</a>, <a href="https://www.gartner.sk/" target="_blank">Rasto Gartner</a>) which led to great product concepts and a quality problem specification. This could further evolve into a product that is:</p>
+                <ul>
+                  <li>- Easy to interact with while being in a car</li>
+                  <li>- Able to collect data that we'd later feed back into the main GPS navigation.</li>
+                </ul>
+                <h5>Solution</h5>
+                <p>First version of the interface would just display your current speed as a metaphor to physical dashboard speedometers and allow you to report incidents and danger zones. Second version added dashboard camera feature and travel logs. </p>
+                <div class="inline-gallery clearfix">
+                  <a rel="p8_1" href="./images/projects/speedcam1.png" title="Final design by Jakub Antalik based on my concept.">
+                    <img src="./images/projects/thumbs/speedcam1_thumb.png" class="thumb animated fadeIn" />
+                  </a>
+                  <a rel="p8_1" href="./images/projects/speedcam2.gif" title="Interface animation.">
+                    <img src="./images/projects/thumbs/speedcam2_thumb.jpg" class="thumb animated fadeIn" />
+                  </a>
+                </div>
+                <p>During two-day company hackathon we managed to port it to Windows Mobile, finally covering all three major mobile platforms with enhanced landscape layouts. Final version was designed with a radar-like interface. Reached 100k downloads in the first month and made it to top 50 rank in 46 countries.</p>
+                <p><em>"Sygic's Speedometer app is gorgeous, with minimalist, elegant styling and an uncluttered overall look, and it works well."<br />- Sarah J. Purewal, PC Revue</em></p>
+              </div>
+            </section>
+          </li>
+          <li class="p7">
+            <div class="close"></div>
+            <section class="head line" id="head_p7">
+              <div class="gallery reveal">
+                <div class="rhombus"></div>
+              </div>
+              <div class="description reveal">
+                <h2>Archiles: bookkeeping made simple</h2>
+                <div class="tags">
+                  <span class="tag">Finance</span>
+                  <span class="tag">Strategy</span>
+                  <span class="tag">B2B</span>
+                  <span class="tag">Craft</span>
+                  <span class="tag">Highly-regulated</span>
+                </div>
+                <p class="datetime">
+                  <abbr class="timeago" title="2013-10-15">October 15, 2013</abbr> | SmartHill
+                  <a href="#" class="learnmore">Learn more</a>
+                </p>
+              </div>
+            </section>
+            <section class="details hidden scribble">
+              <div class="gallery">
+                <a rel="p7" href="./images/projects/archiles2.0.jpg" title="Company profile wireframe - here's where you set up your billing and your company info.">
+                  <img src="./images/projects/thumbs/archiles2.0_thumb.jpg" class="thumb animated fadeIn" />
+                </a>
+                <a rel="p7" href="./images/projects/archiles2.1.jpg" title="Company profile mock-up.">
+                  <img src="./images/projects/thumbs/archiles2.1_thumb.jpg" class="thumb animated fadeIn" />
+                </a>
+                <a rel="p7" href="./images/projects/archiles3.0.jpg" title="A list of documents mock-ups - the primary objective of the application shifted towards files management after insightful qualitative research.">
+                  <img src="./images/projects/thumbs/archiles3.0_thumb.jpg" class="thumb animated fadeIn" />
+                </a>
+                <a rel="p7" href="./images/projects/archiles3.1.jpg" title="This list had to trigger a need to complete archiving process by inviting users to file details and bulk actions. This mock-up illustrates the latter.">
+                  <img src="./images/projects/thumbs/archiles3.1_thumb.jpg" class="thumb animated fadeIn" />
+                </a>
+                <a rel="p7" href="./images/projects/archiles4.0.jpg" title="File detail wireframe. 'Digitalization' (conversion of paper document into digital one) takes place here. If something is wrong, users have control over the information extracted.">
+                  <img src="./images/projects/thumbs/archiles4.0_thumb.jpg" class="thumb animated fadeIn" />
+                </a>
+                <a rel="p7" href="./images/projects/archiles4.1.jpg" title="File detail mock-up. Clear indication what the first step should be.">
+                  <img src="./images/projects/thumbs/archiles4.1_thumb.jpg" class="thumb animated fadeIn" />
+                </a>
+                <a rel="p7" href="./images/projects/archiles5.1.jpg" title="Grid view.">
+                  <img src="./images/projects/thumbs/archiles5.1_thumb.jpg" class="thumb animated fadeIn" />
+                </a>
+                <a rel="p7" href="./images/projects/archiles6.jpg" title="Other selected parts of the UI illustrated.">
+                  <img src="./images/projects/thumbs/archiles6_thumb.jpg" class="thumb animated fadeIn" />
+                </a>
+                <p><a href="https://www.archiles.sk/en/" target="_blank">Go to archiles.sk</a></p>
+              </div>
+              <div class="description">
+                <h5>Discovery</h5>
+                <p>Legislation development covering bookkeeping in Slovakia motivated a small startup in Slovakia to craft a product specifically solving issue of digitalizing receipts.</p>
+                <div class="inline-gallery clearfix">
+                  <a rel="p7_1" href="./images/projects/archiles2.0.jpg" title="Company profile wireframe - here's where you set up your billing and your company info.">
+                    <img src="./images/projects/thumbs/archiles2.0_thumb.jpg" class="thumb animated fadeIn" />
+                  </a>
+                  <a rel="p7_1" href="./images/projects/archiles2.1.jpg" title="Company profile mock-up.">
+                    <img src="./images/projects/thumbs/archiles2.1_thumb.jpg" class="thumb animated fadeIn" />
+                  </a>
+                </div>
+                <p>I was asked to look into their concept mock-ups and make it easily acceptable by a community of hard-to-convince bookkeepers. The proposed concept had the idea (functions) right, but the execution was missing the delight and ease-of-use in the interactions.</p>
+                <h5>Solution</h5>
+                <div class="inline-gallery clearfix">
+                  <a rel="p7_2" href="./images/projects/archiles3.0.jpg" title="A list of documents mock-ups - the primary objective of the application shifted towards files management after insightful qualitative research.">
+                    <img src="./images/projects/thumbs/archiles3.0_thumb.jpg" class="thumb animated fadeIn" />
+                  </a>
+                  <a rel="p7_2" href="./images/projects/archiles3.1.jpg" title="This list had to trigger a need to complete archiving process by inviting users to file details and bulk actions. This mock-up illustrates the latter.">
+                    <img src="./images/projects/thumbs/archiles3.1_thumb.jpg" class="thumb animated fadeIn" />
+                  </a>
+                </div>
+                <p>Understanding accounting was a frustrating first step but a rewarding one.</p>
+                <h5>Solution</h5>
+                <p>Apart from becoming a rookie bookkeeper, the project kicked off with series of stakeholder interviews and short taxonomy research. This translated into the first iteration of a prototype and qualitative research carried out by the team.</p>
+                <div class="inline-gallery clearfix">
+                  <a rel="p7_3" href="./images/projects/archiles4.0.jpg" title="File detail wireframe. 'Digitalization' (conversion of paper document into digital one) takes place here. If something is wrong, users have control over the information extracted.">
+                    <img src="./images/projects/thumbs/archiles4.0_thumb.jpg" class="thumb animated fadeIn" />
+                  </a>
+                  <a rel="p7_3" href="./images/projects/archiles4.1.jpg" title="File detail mock-up. Clear indication what the first step should be.">
+                    <img src="./images/projects/thumbs/archiles4.1_thumb.jpg" class="thumb animated fadeIn" />
+                  </a>
+                </div>
+                <p>We needed to get back to the drawing board and rethink the concept. The prototype we built was mainly focused on file management. And it worked!</p>
+                <div class="inline-gallery clearfix">
+                  <a rel="p7_4" href="./images/projects/archiles5.1.jpg" title="Grid view.">
+                    <img src="./images/projects/thumbs/archiles5.1_thumb.jpg" class="thumb animated fadeIn" />
+                  </a>
+                  <a rel="p7_4" href="./images/projects/archiles6.jpg" title="Other selected parts of the UI illustrated.">
+                    <img src="./images/projects/thumbs/archiles6_thumb.jpg" class="thumb animated fadeIn" />
+                  </a>
+                </div>
+                <p>We decided to approach it with an easy onboarding and carefully selected tone of communication - allowing first-time users to explore and build trust while allowing the advanced users to benefit from a streamlined use.</p>
+                <p><a href="https://www.archiles.sk/en/" target="_blank" class="learnmore">Go to archiles.sk</a></p>
+              </div>
+            </section>
+          </li>
+
+          <!-- Project 4 -->
+          <li class="p6">
+            <div class="close"></div>
+            <section class="head line" id="head_p6">
+              <div class="gallery reveal">
+                <div class="rhombus"></div>
+              </div>
+              <div class="description reveal">
+                <h2>National car registry</h2>
+                <div class="tags">
+                  <span class="tag">E-gov</span>
+                  <span class="tag">Strategy</span>
+                  <span class="tag">B2B</span>
+                  <span class="tag">Craft</span>
+                  <span class="tag">Mobile</span>
+                  <span class="tag">HCI</span>
+                  <span class="tag">Highly-regulated</span>
+                </div>
+                <p class="datetime">
+                  <abbr class="timeago" title="2013-06-01">June 1, 2013</abbr> | Ministry of Interior Affairs of SR
+                  <a href="#" class="learnmore">Learn more</a>
+                </p>
+              </div>
+            </section>
+            <section class="details hidden scribble">
+              <div class="gallery">
+                <a rel="p6" href="./images/projects/ncr0.jpg" title="Sketches of variations of navigation.">
+                  <img src="./images/projects/thumbs/ncr0_thumb.jpg" class="thumb animated fadeIn" />
+                </a>
+                <a rel="p6" href="./images/projects/ncr1.0.jpg" title="A mock-up of the 'home' screen. The concept relies on skeuomorphism resembling the way the officers hold the documents.">
+                  <img src="./images/projects/thumbs/ncr1.0_thumb.jpg" class="thumb animated fadeIn" />
+                </a>
+                <a rel="p6" href="./images/projects/ncr1.1.jpg" title="The UI relied a lot on the statuses. In this case everything is green - good to go.">
+                  <img src="./images/projects/thumbs/ncr1.1_thumb.jpg" class="thumb animated fadeIn" />
+                </a>
+                <a rel="p6" href="./images/projects/ncr2.0.jpg" title="What if people claim they forgot to take their documents with them? What if their documents got stolen or lost?">
+                  <img src="./images/projects/thumbs/ncr2.0_thumb.jpg" class="thumb animated fadeIn" />
+                </a>
+                <a rel="p6" href="./images/projects/ncr2.1.jpg" title="Instead of traditional list display I've decided to go with miniature versions of all the documents a person has.">
+                  <img src="./images/projects/thumbs/ncr2.1_thumb.jpg" class="thumb animated fadeIn" />
+                </a>
+                <a rel="p6" href="./images/projects/ncr3.jpg" title="The design was accounting for several defensive states. That is when something unexpected happens (like a loss of connectivity in this case).">
+                  <img src="./images/projects/thumbs/ncr3_thumb.jpg" class="thumb animated fadeIn" />
+                </a>
+                <a rel="p6" href="./images/projects/ncr4.jpg" title="Another example of error. Instead of telling users they did something wrong, this nudges them to fix the problem without blaming anyone.">
+                  <img src="./images/projects/thumbs/ncr4_thumb.jpg" class="thumb animated fadeIn" />
+                </a>
+                <a rel="p6" href="./images/projects/ncr5.jpg" title="Finally - the application won 1st prize on ITAPA Slovakia 2013 in 'best overall' category (an event ranking best government digital projects).">
+                  <img src="./images/projects/thumbs/ncr5_thumb.jpg" class="thumb animated fadeIn" />
+                </a>
+              </div>
+              <div class="description">
+                <h5>Discovery</h5>
+                <p>NCR started as a touch-enabled dashboard panel installed into police cars. It allowed police officers to scan documents and do background checks in international databases in matter of seconds.</p>
+                <p>I was surprised by the maturity of the team's understanding of importance of the human-centered approach. When I stepped in the application had already a set of UI elements designed, but had confusing information architecture with more than 8 layers of navigation and was lacking a clear user journey.</p>
+                <div class="inline-gallery clearfix">
+                  <a rel="p6_1" href="./images/projects/ncr0.jpg" title="Sketches of variations of navigation.">
+                    <img src="./images/projects/thumbs/ncr0_thumb.jpg" class="thumb animated fadeIn" />
+                  </a>
+                </div>
+                <h5>Solution</h5>
+                <div class="inline-gallery clearfix">
+                  <a rel="p6_2" href="./images/projects/ncr1.0.jpg" title="A mock-up of the 'home' screen. The concept relies on skeuomorphism resembling the way the officers hold the documents.">
+                    <img src="./images/projects/thumbs/ncr1.0_thumb.jpg" class="thumb animated fadeIn" />
+                  </a>
+                  <a rel="p6_2" href="./images/projects/ncr1.1.jpg" title="The UI relied a lot on the statuses. In this case everything is green - good to go.">
+                    <img src="./images/projects/thumbs/ncr1.1_thumb.jpg" class="thumb animated fadeIn" />
+                  </a>
+                </div>
+                <p>Starting from scratch was tough. The new (shallow) info architecture allowed better scaling and more flexible and reusable elements. New UI elements were representing a metaphor of a hand holding the IDs and seeing the IDs that weren't checked yet.</p>
+                <div class="inline-gallery clearfix">
+                  <a rel="p6_3" href="./images/projects/ncr2.0.jpg" title="What if people claim they forgot to take their documents with them? What if their documents got stolen or lost?">
+                    <img src="./images/projects/thumbs/ncr2.0_thumb.jpg" class="thumb animated fadeIn" />
+                  </a>
+                  <a rel="p6_3" href="./images/projects/ncr2.1.jpg" title="Instead of traditional list display I've decided to go with miniature versions of all the documents a person has.">
+                    <img src="./images/projects/thumbs/ncr2.1_thumb.jpg" class="thumb animated fadeIn" />
+                  </a>
+                </div>
+                <p>The main goal of the UI was to bring in a consistency and guidance resulting into very clean and feedback-focused interface.</p>
+                <div class="inline-gallery clearfix">
+                  <a rel="p6_4" href="./images/projects/ncr3.jpg" title="The design was accounting for several defensive states. That is when something unexpected happens (like a loss of connectivity in this case).">
+                    <img src="./images/projects/thumbs/ncr3_thumb.jpg" class="thumb animated fadeIn" />
+                  </a>
+                  <a rel="p6_4" href="./images/projects/ncr4.jpg" title="Another example of error. Instead of telling users they did something wrong, this nudges them to fix the problem without blaming anyone.">
+                    <img src="./images/projects/thumbs/ncr4_thumb.jpg" class="thumb animated fadeIn" />
+                  </a>
+                </div>
+                <p><em>"Jules brought 'new wind' into our application. His ability to solve customers' requirements in line with UX principles is amazing. Project NCR also won ITAPA price and this is also his reference."<br />- M.Dudlak, Senior Project Manager</em></p>
+                <div class="inline-gallery clearfix">
+                  <a rel="p6_5" href="./images/projects/ncr5.jpg" title="Finally - the application won 1st prize on ITAPA Slovakia 2013 in 'best overall' category (an event ranking best government digital projects).">
+                    <img src="./images/projects/thumbs/ncr5_thumb.jpg" class="thumb animated fadeIn" />
+                  </a>
+                </div>
+              </div>
+            </section>
+          </li>
+          <li class="p5">
+            <div class="close"></div>
+            <section class="head line" id="head_p5">
+              <div class="gallery reveal">
+                <div class="rhombus"></div>
+              </div>
+              <div class="description reveal">
+                <h2>Family GPS tracker</h2>
+                <div class="tags">
+                  <span class="tag">Maps</span>
+                  <span class="tag">Strategy</span>
+                  <span class="tag">B2C</span>
+                  <span class="tag">Mobile</span>
+                  <span class="tag">Craft</span>
+                  <span class="tag">HCI</span>
+                </div>
+                <p class="datetime">
+                  <abbr class="timeago" title="2013-04-01">April 1, 2013</abbr> | Sygic
+                  <a href="#" class="learnmore">Learn more</a>
+                </p>
+              </div>
+            </section>
+            <section class="details hidden scribble">
+              <div class="gallery">
+                <a rel="p5" href="./images/projects/family1.1.jpg" title="Basic map view - displaying where your family members are in the real time.">
+                  <img src="./images/projects/thumbs/family1.1_thumb.jpg" class="thumb animated fadeIn" />
+                </a>
+                <a rel="p5" href="./images/projects/family2.1.jpg" title="To help family members to meet we introduced the 'augmented reality' overlay.">
+                  <img src="./images/projects/thumbs/family2.1_thumb.jpg" class="thumb animated fadeIn" />
+                </a>
+                <a rel="p5" href="./images/projects/family3.1.jpg" title="A quick way to call or message family members right from the interface.">
+                  <img src="./images/projects/thumbs/family3.1_thumb.jpg" class="thumb animated fadeIn" />
+                </a>
+                <a rel="p5" href="./images/projects/family4.1.jpg" title="Application menu with dominant emergency button.">
+                  <img src="./images/projects/thumbs/family4.1_thumb.jpg" class="thumb animated fadeIn" />
+                </a>
+                <a rel="p5" href="./images/projects/family5.1.jpg" title="Alert triggered lets you cancel it within the 5s countdown if pressed by mistake.">
+                  <img src="./images/projects/thumbs/family5.1_thumb.jpg" class="thumb animated fadeIn" />
+                </a>
+                <a rel="p5" href="./images/projects/family6.0.jpg" title="Gamification layer was introduced in the first beta version and boosted engagement and time spent in application a lot.">
+                  <img src="./images/projects/thumbs/family6.0_thumb.jpg" class="thumb animated fadeIn" />
+                </a>
+                <p><a href="https://www.sygic.com/family-locator/features" target="_blank">View on sygic.com</a></p>
+              </div>
+              <div class="description">
+                <h5>Discovery</h5>
+                <p>Family locator is a safety-first app to help parents know where their kids are at any given moment. The beta release revealed a lot of technical as well as usability problems. Product manager <a href="https://sk.linkedin.com/in/maslejovamartina" target="_blank">Martina Maslejova</a> asked me to pinpoint these moments of friction. Later, I was on a mission to figure out various monetization schemes.</p>
+                <div class="inline-gallery clearfix">
+                  <a rel="p5_1" href="./images/projects/family6.0.jpg" title="Gamification layer was introduced in the first beta version and boosted engagement and time spent in application a lot.">
+                    <img src="./images/projects/thumbs/family6.0_thumb.jpg" class="thumb animated fadeIn" />
+                  </a>
+                </div>
+                <p>The customer journey map and user on-boarding was missing too. The brief was fairly general which motivated me to bring in some UX design treatment and allowed me to get a buy in for deep rooting gamification into the interactions.</p>
+                <h5>Solution</h5>
+                <div class="inline-gallery clearfix">
+                  <a rel="p5_2" href="./images/projects/family1.1.jpg" title="Basic map view - displaying where your family members are in the real time.">
+                    <img src="./images/projects/thumbs/family1.1_thumb.jpg" class="thumb animated fadeIn" />
+                  </a>
+                  <a rel="p5_2" href="./images/projects/family2.1.jpg" title="To help family members to meet we introduced the 'augmented reality' overlay.">
+                    <img src="./images/projects/thumbs/family2.1_thumb.jpg" class="thumb animated fadeIn" />
+                  </a>
+                </div>
+                <p>Customer journey map allowed me to see the best opportunities for monetization and opened many other options for additional user needs that can be turned into features. Gamification underlined this goal and daily and monthly engagement rates grew tremendously. Last time I worked on the app it had already more than 100k users.</p>
+                <div class="inline-gallery clearfix">
+                  <a rel="p5_3" href="./images/projects/family3.1.jpg" title="A quick way to call or message family members right from the interface.">
+                    <img src="./images/projects/thumbs/family3.1_thumb.jpg" class="thumb animated fadeIn" />
+                  </a>
+                  <a rel="p5_3" href="./images/projects/family4.1.jpg" title="Application menu with dominant emergency button.">
+                    <img src="./images/projects/thumbs/family4.1_thumb.jpg" class="thumb animated fadeIn" />
+                  </a>
+                  <a rel="p5_3" href="./images/projects/family5.1.jpg" title="Alert triggered lets you cancel it within the 5s countdown if pressed by mistake.">
+                    <img src="./images/projects/thumbs/family5.1_thumb.jpg" class="thumb animated fadeIn" />
+                  </a>
+                </div>
+                <p><em>An easy, fun and efficient way to keep an eye on the people you care about.<br />- Enejo Abdu, Google Play</em></p>
+              </div>
+            </section>
+          </li>
+          <li class="p4">
+            <div class="close"></div>
+            <section class="head line" id="head_p4">
+              <div class="gallery reveal">
+                <div class="rhombus"></div>
+              </div>
+              <div class="description reveal">
+                <h2>xManager: activity tracking</h2>
+                <div class="tags">
+                  <span class="tag">Productivity</span>
+                  <span class="tag">Strategy</span>
+                  <span class="tag">B2B</span>
+                  <span class="tag">Mobile</span>
+                  <span class="tag">Craft</span>
+                  <span class="tag">Highly-regulated</span>
+                </div>
+                <p class="datetime">
+                  <abbr class="timeago" title="2013-02-01">February 1, 2013</abbr> | KFB
+                  <a href="#" class="learnmore">Learn more</a>
+                </p>
+              </div>
+            </section>
+            <section class="details hidden scribble">
+              <div class="gallery">
+                <a rel="p4" href="./images/projects/xmanager0.png" title="Sitemap and analysis of current functions helped me understand where this software needs improvement and what just works fine.">
+                  <img src="./images/projects/thumbs/xmanager0_thumb.png" class="thumb animated fadeIn" />
+                </a>
+                <a rel="p4" href="./images/projects/xmanager1.0.jpg" title="Lab testing identified key problems in the prototype and influenced the final UI designs.">
+                  <img src="./images/projects/thumbs/xmanager1.0_thumb.jpg" class="thumb animated fadeIn" />
+                </a>
+                <a rel="p4" href="./images/projects/xmanager1.1.jpg" title="Usability testing was streamed right to the business stakeholders.">
+                  <img src="./images/projects/thumbs/xmanager1.1_thumb.jpg" class="thumb animated fadeIn" />
+                </a>
+                <a rel="p4" href="./images/projects/xmanager2.0.jpg" title="The idea of the timelines and the time spent on the tasks in a relative scale.">
+                  <img src="./images/projects/thumbs/xmanager2.0_thumb.jpg" class="thumb animated fadeIn" />
+                </a>
+                <a rel="p4" href="./images/projects/xmanager2.1.jpg" title="Single employee's timeline with an error message.">
+                  <img src="./images/projects/thumbs/xmanager2.1_thumb.jpg" class="thumb animated fadeIn" />
+                </a>
+                <a rel="p4" href="./images/projects/xmanager3.0.jpg" title="Single employee's timeline over the week - prototype.">
+                  <img src="./images/projects/thumbs/xmanager3.0_thumb.jpg" class="thumb animated fadeIn" />
+                </a>
+                <a rel="p4" href="./images/projects/xmanager3.1.jpg" title="Single employee's timeline over the week - mock-up.">
+                  <img src="./images/projects/thumbs/xmanager3.1_thumb.jpg" class="thumb animated fadeIn" />
+                </a>
+                <a rel="p4" href="./images/projects/xmanager4.0.jpg" title="Month view - prototype.">
+                  <img src="./images/projects/thumbs/xmanager4.0_thumb.jpg" class="thumb animated fadeIn" />
+                </a>
+                <a rel="p4" href="./images/projects/xmanager4.1.jpg" title="Month view - mock-up.">
+                  <img src="./images/projects/thumbs/xmanager4.1_thumb.jpg" class="thumb animated fadeIn" />
+                </a>
+                <a rel="p4" href="./images/projects/xmanager5.jpg" title="UI styleguide used for reports.">
+                  <img src="./images/projects/thumbs/xmanager5_thumb.jpg" class="thumb animated fadeIn" />
+                </a>
+                <p><a href="https://www.clevork.sk/" target="_blank">View on clevork.sk</a></p>
+              </div>
+              <div class="description">
+                <h5>Discovery</h5>
+                <p>KFB is a supplier of the activity tracking software for large automobile factories (think 4000+ employees). The last version of the application was full of features that were barely used. The functions were in place but they weren't accessible. </p>
+                <div class="inline-gallery clearfix">
+                  <a rel="p4_1" href="./images/projects/xmanager0.png" title="Sitemap and analysis of current functions helped me understand where this software needs improvement and what just works fine.">
+                    <img src="./images/projects/thumbs/xmanager0_thumb.png" class="thumb animated fadeIn" />
+                  </a>
+                  <a rel="p4_1" href="./images/projects/xmanager1.0.jpg" title="Lab testing identified key problems in the prototype and influenced the final UI designs.">
+                    <img src="./images/projects/thumbs/xmanager1.0_thumb.jpg" class="thumb animated fadeIn" />
+                  </a>
+                  <a rel="p4_1" href="./images/projects/xmanager1.1.jpg" title="Usability testing was streamed right to the business stakeholders.">
+                    <img src="./images/projects/thumbs/xmanager1.1_thumb.jpg" class="thumb animated fadeIn" />
+                  </a>
+                </div>
+                <p>A new interface was needed to be designed carefully - that's why KFB decided to go with safer approach and employ qualitative research upfront.</p>
+                <h5>Solution</h5>
+                <div class="inline-gallery clearfix">
+                  <a rel="p4_2" href="./images/projects/xmanager2.0.jpg" title="The idea of the timelines and the time spent on the tasks in a relative scale.">
+                    <img src="./images/projects/thumbs/xmanager2.0_thumb.jpg" class="thumb animated fadeIn" />
+                  </a>
+                  <a rel="p4_2" href="./images/projects/xmanager2.1.jpg" title="Single employee's timeline with an error message.">
+                    <img src="./images/projects/thumbs/xmanager2.1_thumb.jpg" class="thumb animated fadeIn" />
+                  </a>
+                </div>
+                <p>Contextual inquiries, stakeholder interviews, need-finding sessions as well as observational studies were carried out in the first phase of the full-flanked qualitative research over the first 3 months. Followed up by personas and user journey mapping serving as a solid foundation for information architecture. Last 4 months of the project were dedicated to user interface design.</p>
+                <div class="inline-gallery clearfix">
+                  <a rel="p4_3" href="./images/projects/xmanager3.0.jpg" title="Single employee's timeline over the week - prototype.">
+                    <img src="./images/projects/thumbs/xmanager3.0_thumb.jpg" class="thumb animated fadeIn" />
+                  </a>
+                  <a rel="p4_3" href="./images/projects/xmanager3.1.jpg" title="Single employee's timeline over the week - mock-up.">
+                    <img src="./images/projects/thumbs/xmanager3.1_thumb.jpg" class="thumb animated fadeIn" />
+                  </a>
+                </div>
+                <p>The results were more than positive - system usability score of more than 80% was a promising start for moving into production with full confidence.</p>
+                <div class="inline-gallery clearfix">
+                  <a rel="p4_4" href="./images/projects/xmanager4.0.jpg" title="Month view - prototype.">
+                    <img src="./images/projects/thumbs/xmanager4.0_thumb.jpg" class="thumb animated fadeIn" />
+                  </a>
+                  <a rel="p4_4" href="./images/projects/xmanager4.1.jpg" title="Month view - mock-up.">
+                    <img src="./images/projects/thumbs/xmanager4.1_thumb.jpg" class="thumb animated fadeIn" />
+                  </a>
+                  <a rel="p4_4" href="./images/projects/xmanager5.jpg" title="UI styleguide used for reports.">
+                    <img src="./images/projects/thumbs/xmanager5_thumb.jpg" class="thumb animated fadeIn" />
+                  </a>
+                </div>
+                <p><em>"Visualizing the data this way really helps!"<br />- Jindrich Vidensky, Senior Manager</em></p>
+              </div>
+            </section>
+          </li>
+          <li class="p3">
+            <div class="close"></div>
+            <section class="head line" id="head_p3">
+              <div class="gallery reveal">
+                <div class="rhombus"></div>
+              </div>
+              <div class="description reveal">
+                <h2>Sygic GPS Navigation</h2>
+                <div class="tags">
+                  <span class="tag">Maps</span>
+                  <span class="tag">Strategy</span>
+                  <span class="tag">B2C</span>
+                  <span class="tag">Mobile</span>
+                  <span class="tag">Craft</span>
+                  <span class="tag">Marketing</span>
+                  <span class="tag">HCI</span>
+                </div>
+                <p class="datetime">
+                  <abbr class="timeago" title="2012-12-01">December 1, 2012</abbr> | Sygic
+                  <a href="#" class="learnmore">Learn more</a>
+                </p>
+              </div>
+            </section>
+            <section class="details hidden scribble">
+              <div class="gallery">
+                <a rel="p3" href="./images/projects/gps7.jpg" title="Interactive prototype that I've built on JavaScript and was used over all our qualitative research sessions.">
+                  <img src="./images/projects/thumbs/gps7_thumb.jpg" class="thumb animated fadeIn" />
+                </a>
+                <a rel="p3" href="./images/projects/gps8.jpg" title="Interactive prototype - search.">
+                  <img src="./images/projects/thumbs/gps8_thumb.jpg" class="thumb animated fadeIn" />
+                </a>
+                <a rel="p3" href="./images/projects/gps0.jpg" title="Landscape mode of the navigation screen as designed by our small internal design lab: Juraj Rosa, Stanislav Luzbetak, Rastislav Gartner and me.">
+                  <img src="./images/projects/thumbs/gps0_thumb.jpg" class="thumb animated fadeIn" />
+                </a>
+                <a rel="p3" href="./images/projects/gps1.jpg" title="Quick menu to access all the additional features unique to Sygic GPS Navigation.">
+                  <img src="./images/projects/thumbs/gps1_thumb.jpg" class="thumb animated fadeIn" />
+                </a>
+                <a rel="p3" href="./images/projects/gps2.jpg" title="Lists of saved locations - an example how much we were following the iOS platform conventions at the time.">
+                  <img src="./images/projects/thumbs/gps2_thumb.jpg" class="thumb animated fadeIn" />
+                </a>
+                <a rel="p3" href="./images/projects/gps3.jpg" title="Main menu including flexible layouts for addons and plugins build on Sygic's proprietary platform. " />
+                <img src="./images/projects/thumbs/gps3_thumb.jpg" class="thumb animated fadeIn" />
+              </a>
+              <a rel="p3" href="./images/projects/gps4.jpg" title="Personal settings.">
+                <img src="./images/projects/thumbs/gps4_thumb.jpg" class="thumb animated fadeIn" />
+              </a>
+              <a rel="p3" href="./images/projects/gps5.jpg" title="Searching for destination was considered one of the most innovative ways at the time (this was before Google maps came with very similar search user flow).">
+                <img src="./images/projects/thumbs/gps5_thumb.jpg" class="thumb animated fadeIn" />
+              </a>
+              <a rel="p3" href="./images/projects/gps6.jpg" title="End of route provides additional ways how to monetize and crosssell the location based services.">
+                <img src="./images/projects/thumbs/gps6_thumb.jpg" class="thumb animated fadeIn" />
+              </a>
+              <p><a href="https://www.sygic.com/gps-navigation/features" target="_blank">View on sygic.com</a></p>
+            </div>
+            <div class="description">
+              <h5>Discovery</h5>
+              <p>I joined the company as a UX designer to start working on a big (secret) project that was just kicking off. A GPS navigation that would conquer the market.</p>
+              <p>In collaboration with senior UX designer <a href="https://www.linkedin.com/in/jurajrosa" target="_blank">Juraj Rosa</a> we have held several brainstorming sessions with key business stakeholders and organized numerous qualitative research sessions (taxonomy, info architecture testing, usability testing, field testing, contextual inquiries etc.).</p>
+              <h5>Solution</h5>
+              <p>To get a better understanding of the design problems I built an interactive JavaScript prototype that was used on usability testing sessions (which I was also facilitating).</p>
+              <div class="inline-gallery clearfix">
+                <a rel="p3_1" href="./images/projects/gps7.jpg" title="Interactive prototype that I've built on JavaScript and was used over all our qualitative research sessions.">
+                  <img src="./images/projects/thumbs/gps7_thumb.jpg" class="thumb animated fadeIn" />
+                </a>
+                <a rel="p3_1" href="./images/projects/gps8.jpg" title="Interactive prototype - search.">
+                  <img src="./images/projects/thumbs/gps8_thumb.jpg" class="thumb animated fadeIn" />
+                </a>
+                <a rel="p3_1" href="./images/projects/gps0.jpg" title="Landscape mode of the navigation screen as designed by our small internal design lab: Juraj Rosa, Stanislav Luzbetak, Rastislav Gartner and me.">
+                  <img src="./images/projects/thumbs/gps0_thumb.jpg" class="thumb animated fadeIn" />
+                </a>
+                <a rel="p3_1" href="./images/projects/gps1.jpg" title="Quick menu to access all the additional features unique to Sygic GPS Navigation.">
+                  <img src="./images/projects/thumbs/gps1_thumb.jpg" class="thumb animated fadeIn" />
+                </a>
+              </div>
+              <p>It took a year to get the application through the waterfall development cycle and half-way through iOS7 was released which meant a complete change from the traditional skeuomorphic to flat design. I led the transition to the new flat UI and implementation of the new interactions.</p>
+              <div class="inline-gallery clearfix">
+                <a rel="p3_2" href="./images/projects/gps2.jpg" title="Lists of saved locations - an example how much we were following the iOS platform conventions at the time.">
+                  <img src="./images/projects/thumbs/gps2_thumb.jpg" class="thumb animated fadeIn" />
+                </a>
+                <a rel="p3_2" href="./images/projects/gps3.jpg" title="Main menu including flexible layouts for addons and plugins build on Sygic's proprietary platform. " />
+                <img src="./images/projects/thumbs/gps3_thumb.jpg" class="thumb animated fadeIn" />
+              </a>
+              <a rel="p3_2" href="./images/projects/gps4.jpg" title="Personal settings.">
+                <img src="./images/projects/thumbs/gps4_thumb.jpg" class="thumb animated fadeIn" />
+              </a>
+            </div>
+            <p>Lastly, by evangelizing UX practices within the company and being responsible for correct implementation of the UX design we managed to create an application that would dominate the market in the upcoming years. At the time of writing the application was downloaded 110 million times.</p>
+            <div class="inline-gallery clearfix">
+              <a rel="p3_3" href="./images/projects/gps5.jpg" title="Searching for destination was considered one of the most innovative ways at the time (this was before Google maps came with very similar search user flow).">
+                <img src="./images/projects/thumbs/gps5_thumb.jpg" class="thumb animated fadeIn" />
+              </a>
+              <a rel="p3_3" href="./images/projects/gps6.jpg" title="End of route provides additional ways how to monetize and crosssell the location based services.">
+                <img src="./images/projects/thumbs/gps6_thumb.jpg" class="thumb animated fadeIn" />
+              </a>
+            </div>
+          </div>
+        </section>
+      </li>
+      <li class="p2">
+        <div class="close"></div>
+        <section class="head line" id="head_p2">
+          <div class="gallery reveal">
+            <div class="rhombus"></div>
+          </div>
+          <div class="description reveal">
+            <h2>Sygic.com</h2>
+            <div class="tags">
+              <span class="tag">Strategy</span>
+              <span class="tag">B2C</span>
+              <span class="tag">Mobile</span>
+              <span class="tag">Craft</span>
+              <span class="tag">Marketing</span>
+              <span class="tag">Sales</span>
+            </div>
+            <p class="datetime">
+              <abbr class="timeago" title="2012-09-01">September 1, 2012</abbr> | Sygic
+              <a href="#" class="learnmore">Learn more</a>
+            </p>
+          </div>
+        </section>
+        <section class="details hidden scribble">
+          <div class="gallery">
+            <a rel="p2" href="./images/projects/sygic0.0.jpg" title="My first assignment was our online shop. This is a shopping cart wireframe.">
+              <img src="./images/projects/thumbs/sygic0.0_thumb.jpg" class="thumb animated fadeIn" />
+            </a>
+            <a rel="p2" href="./images/projects/sygic0.1.jpg" title="HTML prototype helped front-end team to easily implement the solution within a single week sprint. The designs were provided by designer Jakub Ptacin.">
+              <img src="./images/projects/thumbs/sygic0.1_thumb.jpg" class="thumb animated fadeIn" />
+            </a>
+            <a rel="p2" href="./images/projects/sygic1.0.jpg" title="Step 2 wireframe.">
+              <img src="./images/projects/thumbs/sygic1.0_thumb.jpg" class="thumb animated fadeIn" />
+            </a>
+            <a rel="p2" href="./images/projects/sygic1.1.jpg" title="Step 2 interactive HTML prototype.">
+              <img src="./images/projects/thumbs/sygic1.1_thumb.jpg" class="thumb animated fadeIn" />
+            </a>
+            <a rel="p2" href="./images/projects/sygic2.0.jpg" title="'Sygic.com for Business' - large scale project involving an entire division of the company and plenty of stakeholders. A lot of facilitation was needed to get a go on this one.">
+              <img src="./images/projects/thumbs/sygic2.0_thumb.jpg" class="thumb animated fadeIn" />
+            </a>
+            <a rel="p2" href="./images/projects/sygic2.1.jpg" title="A mock-up of business part of the website.">
+              <img src="./images/projects/thumbs/sygic2.1_thumb.jpg" class="thumb animated fadeIn" />
+            </a>
+            <a rel="p2" href="./images/projects/sygic3.1.jpg" title="I have created a concept of axonometric views of the devices to better explain how the navigations works with large fleets.">
+              <img src="./images/projects/thumbs/sygic3.1_thumb.jpg" class="thumb animated fadeIn" />
+            </a>
+            <a rel="p2" href="./images/projects/sygic4.1.jpg" title="And finally the homepage as an entry point to the conversion funnel.">
+              <img src="./images/projects/thumbs/sygic4.1_thumb.jpg" class="thumb animated fadeIn" />
+            </a>
+            <p><a href="https://www.sygic.com/" target="_blank">View on sygic.com</a></p>
+          </div>
+          <div class="description">
+            <h5>Discovery</h5>
+            <p></p>
+            <p>My first big project at Sygic was to analyze existing customer journey and identify weak points and potential opportunities.</p>
+            <p>The second project was to build a business section from scratch as the company organization had changed. Lastly, I was asked to optimize the homepage and its funnel to increase overall conversions (volume but also business impact).</p>
+            <h5>Solution</h5>
+            <p>I identified mobile shopping to be cumbersome and prone to many user errors. By a series of tweaks I managed to lift mobile conversions by approximately 40% (rough estimate as I did not have access to exact figures).</p>
+            <div class="inline-gallery clearfix">
+              <a rel="p2_1" href="./images/projects/sygic0.0.jpg" title="My first assignment was our online shop. This is a shopping cart wireframe.">
+                <img src="./images/projects/thumbs/sygic0.0_thumb.jpg" class="thumb animated fadeIn" />
+              </a>
+              <a rel="p2_1" href="./images/projects/sygic0.1.jpg" title="HTML prototype helped front-end team to easily implement the solution within a single week sprint. The designs were provided by designer Jakub Ptacin.">
+                <img src="./images/projects/thumbs/sygic0.1_thumb.jpg" class="thumb animated fadeIn" />
+              </a>
+              <a rel="p2_1" href="./images/projects/sygic1.0.jpg" title="Step 2 wireframe.">
+                <img src="./images/projects/thumbs/sygic1.0_thumb.jpg" class="thumb animated fadeIn" />
+              </a>
+              <a rel="p2_1" href="./images/projects/sygic1.1.jpg" title="Step 2 interactive HTML prototype.">
+                <img src="./images/projects/thumbs/sygic1.1_thumb.jpg" class="thumb animated fadeIn" />
+              </a>
+            </div>
+            <p>Another notable project was the major web portal that I designed in collaboration with senior web designer <a href="https://sk.linkedin.com/in/vincent-durbak-06515791" target="_blank">Vincent Durbak</a>. I was responsible for the B2B part and getting a buy-in from all the stakeholders.</p>
+            <div class="inline-gallery clearfix">
+              <a rel="p2_2" href="./images/projects/sygic2.0.jpg" title="'Sygic.com for Business' - large scale project involving an entire division of the company and plenty of stakeholders. A lot of facilitation was needed to get a go on this one.">
+                <img src="./images/projects/thumbs/sygic2.0_thumb.jpg" class="thumb animated fadeIn" />
+              </a>
+              <a rel="p2_2" href="./images/projects/sygic2.1.jpg" title="A mock-up of business part of the website.">
+                <img src="./images/projects/thumbs/sygic2.1_thumb.jpg" class="thumb animated fadeIn" />
+              </a>
+            </div>
+            <p>Finally, the homepage tweaks led to a much higher user engagement and reorganized info architecture (better findability). The creation of content strategy in collaboration with the marketing department turned our site into a rock-star high performer.</p>
+            <div class="inline-gallery clearfix">
+              <a rel="p2_3" href="./images/projects/sygic3.1.jpg" title="I have created a concept of axonometric views of the devices to better explain how the navigations works with large fleets.">
+                <img src="./images/projects/thumbs/sygic3.1_thumb.jpg" class="thumb animated fadeIn" />
+              </a>
+              <a rel="p2_3" href="./images/projects/sygic4.1.jpg" title="And finally the homepage as an entry point to the conversion funnel.">
+                <img src="./images/projects/thumbs/sygic4.1_thumb.jpg" class="thumb animated fadeIn" />
+              </a>
+            </div>
+          </div>
+        </section>
+      </li>
+      <li class="p-1">
+        <div class="close"></div>
+        <section class="head line" id="head_p-1">
+          <div class="gallery reveal">  
+            <div class="rhombus"></div>
+          </div>
+          <div class="description reveal">
+            <h2>Various older projects</h2>
+            <div class="tags">
+              <span class="tag">Productivity</span>
+              <span class="tag">Gaming</span>
+              <span class="tag">Craft</span>
+            </div>
+            <p class="datetime">
+              <abbr class="timeago" title="2007-01-01">January 1, 2007</abbr> | Various clients
+              <a href="#" class="learnmore">Learn more</a>
+            </p>
+          </div>
+        </section>
+        <section class="details hidden scribble">
+          <div class="gallery">
+            <a rel="p-1" href="./images/projects/old_copy1.jpg" title="Copy.sk web editor wireframe.">
+              <img src="./images/projects/thumbs/old_copy1_thumb.jpg" class="thumb animated fadeIn" />
+            </a>
+            <a rel="p-1" href="./images/projects/old_copy2.jpg" title="Copy.sk home page mock-up.">
+              <img src="./images/projects/thumbs/old_copy2_thumb.jpg" class="thumb animated fadeIn" />
+            </a>
+            <a rel="p-1" href="./images/projects/old_once1.jpg" title="ONCE - 'spacial' gallery browsing mock-up.">
+              <img src="./images/projects/thumbs/old_once1_thumb.jpg" class="thumb animated fadeIn" />
+            </a>
+            <a rel="p-1" href="./images/projects/old_once2.jpg" title="ONCE - landing page mock-up.">
+              <img src="./images/projects/thumbs/old_once2_thumb.jpg" class="thumb animated fadeIn" />
+            </a>
+            <a rel="p-1" href="./images/projects/old_forumstyle1.jpg" title="Gaming server landing page.">
+              <img src="./images/projects/thumbs/old_forumstyle1_thumb.jpg" class="thumb animated fadeIn" />
+            </a>
+            <a rel="p-1" href="./images/projects/old_ma3oshka1.jpg" title="Ma-three-oshka conference home page.">
+              <img src="./images/projects/thumbs/old_ma3oshka1_thumb.jpg" class="thumb animated fadeIn" />
+            </a>
+            <a rel="p-1" href="./images/projects/old_web1.jpg" title="Hype Studio project detail page.">
+              <img src="./images/projects/thumbs/old_web1_thumb.jpg" class="thumb animated fadeIn" />
+            </a>
+            <a rel="p-1" href="./images/projects/old_web2.jpg" title="Hype Studio project detail dark theme.">
+              <img src="./images/projects/thumbs/old_web2_thumb.jpg" class="thumb animated fadeIn" />
+            </a>
+            <p><a href="jules-skopp-2013-portfolio.pdf"><i class="fa fa-file-pdf-o"></i> (38MB) 2013 portfolio </a></p>
+            <p><a href="jules-skopp-2012-portfolio.pdf"><i class="fa fa-file-pdf-o"></i> (8MB) 2012 portfolio </a></p>
+            <p><a href="jules-skopp-2011-resume.pdf"><i class="fa fa-file-pdf-o"></i> (5MB) 2011 graphic resume </a></p>
+          </div>
+          <div class="description">
+            <p>These were my projects in the early years of my career that are worth mentioning (most of these sites don't exist anymore):</p>
+            <p><strong>Copy.sk:</strong> UX design for a self-serve print service.</p>
+            <div class="inline-gallery clearfix">
+              <a rel="p-1_1" href="./images/projects/old_copy1.jpg" title="Copy.sk web editor wireframe.">
+                <img src="./images/projects/thumbs/old_copy1_thumb.jpg" class="thumb animated fadeIn" />
+              </a>
+              <a rel="p-1_1" href="./images/projects/old_copy2.jpg" title="Copy.sk home page mock-up.">
+                <img src="./images/projects/thumbs/old_copy2_thumb.jpg" class="thumb animated fadeIn" />
+              </a>
+            </div>
+            <p><strong>Once:</strong> Concept and web design for interior designer's portfolio.</p>
+            <div class="inline-gallery clearfix">
+              <a rel="p-1_2" href="./images/projects/old_once1.jpg" title="ONCE - 'spacial' gallery browsing mock-up.">
+                <img src="./images/projects/thumbs/old_once1_thumb.jpg" class="thumb animated fadeIn" />
+              </a>
+              <a rel="p-1_2" href="./images/projects/old_once2.jpg" title="ONCE - landing page mock-up.">
+                <img src="./images/projects/thumbs/old_once2_thumb.jpg" class="thumb animated fadeIn" />
+              </a>
+            </div>
+            <p><strong>DSV:</strong> UX, UI and database architecture for personal logistics service.</p>
+            <p><strong>Idealmont.sk:</strong> Web design for a construction company.</p>
+            <p><strong>Radnica.com:</strong> Web design and graphic design for a local restaurant.</p>
+            <p><strong>Hype studio:</strong> Web design and brand identity for my consultancy company.</p>
+            <div class="inline-gallery clearfix">
+              <a rel="p-1_3" href="./images/projects/old_web1.jpg" title="Hype Studio project detail page.">
+                <img src="./images/projects/thumbs/old_web1_thumb.jpg" class="thumb animated fadeIn" />
+              </a>
+              <a rel="p-1_3" href="./images/projects/old_web2.jpg" title="Hype Studio project detail dark theme.">
+                <img src="./images/projects/thumbs/old_web2_thumb.jpg" class="thumb animated fadeIn" />
+              </a>
+            </div>
+            <p><strong>Retrocaj:</strong> Web design and graphic design for a university event.</p>
+            <p><strong>Ma3oshka:</strong> Web design, brand identity for an international conference.</p>
+            <div class="inline-gallery clearfix">
+              <a rel="p-1_4" href="./images/projects/old_ma3oshka1.jpg" title="Ma-three-oshka conference home page.">
+                <img src="./images/projects/thumbs/old_ma3oshka1_thumb.jpg" class="thumb animated fadeIn" />
+              </a>
+            </div>
+            <p><strong>Statsys:</strong> Web design, content governance and database design for a gaming portal.</p>
+            <div class="inline-gallery clearfix">
+              <a rel="p-1_5" href="./images/projects/old_forumstyle1.jpg" title="Gaming server landing page.">
+                <img src="./images/projects/thumbs/old_forumstyle1_thumb.jpg" class="thumb animated fadeIn" />
+              </a>
+            </div>
+            <p><strong>SPFASTU.sk:</strong> Web design for university organization.</p>
+            <p><strong>Euglobs.sk:</strong> Web design, brand identity and database design for a real estate portal.</p>
+            <p><strong>Domino:</strong> Graphic design, brand identity for a day-care.</p>
+            <p><a href="jules-skopp-2013-portfolio.pdf" class="learnmore"><i class="fa fa-file-pdf-o"></i> (38MB) 2013 portfolio </a></p>
+            <p><a href="jules-skopp-2012-portfolio.pdf" class="learnmore"><i class="fa fa-file-pdf-o"></i> (8MB) 2012 portfolio </a></p>
+            <p><a href="jules-skopp-2011-resume.pdf" class="learnmore"><i class="fa fa-file-pdf-o"></i> (5MB) 2011 graphic resume </a></p>
+          </div>
+        </section>
+      </li>
+
+      <li class="closure">
+      </li>
+    </ul>
+  </section><!-- / end PROJECTS / -->
+  <section class="contact" id="contact">
+    <!-- / begin CONTACT / -->
+    <h1>Contact me</h1>
+    <p>Thanks for reading through all that. If you're still interested in collaborating with me, please don't hesitate to reach out. You can always reach me at +41 78 603 31 32 (Swiss). If you wish to include more detail fill in the form below:</p>
+    <script type="text/javascript">var submitted=false;</script>
+    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {window.location='https://jules.skopp.sk/thankyou.html';}"></iframe>
+    <form action="https://docs.google.com/forms/d/1RrZ706LiBZNELIDgF1UCceznI6H5bN_TWjUoWiudf8M/formResponse" method="post" target="hidden_iframe" onsubmit="submitted=true;">
+      <div class="email">
+        <div class="gallery">
+          <label for="entry_726817194">Please, enter your email:</label>
+        </div>
+        <div class="description">
+          <input aria-required="true" dir="auto" id="entry_726817194" name="entry.726817194" type="text" value="" />
+        </div>
+      </div>
+      <div class="message">
+        <div class="gallery">
+          <label for="entry_125753678">How can I help you?</label>
+        </div>
+        <div class="description">
+          <textarea aria-required="true" cols="0" dir="auto" id="entry_125753678" name="entry.125753678" rows="8"></textarea>
+          <input name="draftResponse" type="hidden" value="[] " />
+          <input name="pageHistory" type="hidden" value="0" />
+          <input id="ss-submit" name="submit" type="submit" value="Send" />
+        </div>
+      </div>
+    </form>
+  </section><!-- / end CONTACT / -->
+</div><!-- / end CONTENT / -->
+
+
+<!-- / begin MENU / -->
+<div class="nav">
+
+  <div class="logo logo-right">
+    <h2>J.Skopp</h2>
+  </div>
+
+  <nav class="navigation clearfix" id="navigation">
+    <ul class="sf-menu menu">
+      <li class="menu-item menu-item-type-post_type menu-item-object-page">
+        <a href="#content">Hello</a>
+      </li>
+      <li class="menu-item menu-item-type-post_type menu-item-object-page">
+        <a href="#skills">Skills</a>
+      </li>
+      <li class="menu-item menu-item-type-post_type menu-item-object-page">
+        <a href="#projects">Projects</a>
+      </li>
+      <li class="menu-item menu-item-type-post_type menu-item-object-page">
+        <a href="#" class="process-dialog">Process</a>
+      </li>
+      <li class="menu-item menu-item-type-post_type menu-item-object-page">
+        <a href="#contact">Contact</a>
+      </li>
+      <li class="menu-item menu-item-type-post_type menu-item-object-page">
+        <a href="jules-skopp-2025-resume.pdf"><i class="fa fa-file-pdf-o"></i> Resume</a>
+      </li>
+      <li class="menu-item menu-item-type-post_type menu-item-object-page">
+        <a href="https://uxthis.blogspot.com" target="_blank"><i class="fa fa-external-link"></i>Blog</a>
+      </li>
+              <!--
+              <li class="menu-item menu-item-type-post_type menu-item-object-page">
+              <a href="jules-skopp-2013-portfolio.pdf"><i class="fa fa-file-pdf-o"></i> 2013 portfolio</a></li>
+      -->
+    </ul>
+  </nav>
+
+  <div class="social">
+    <a href="https://www.linkedin.com/in/juliusskopp" title="LinkedIn profile" target="_blank">
+      <i class="fa fa-linkedin"></i>
+    </a>
+    <a href="https://twitter.com/zmetak" title="Twitter profile" target="_blank">
+      <i class="fa fa-twitter"></i>
+    </a>
+    <a href="https://www.facebook.com/jules.skopp" title="Facebook profile" target="_blank">
+      <i class="fa fa-facebook"></i>
+    </a>
+  </div>
+
+</div>
+
+
+</div><!-- / end MENU / -->     
+</div><!-- / end CONTAINER / -->
+
+<div id="dialogOverlay" class="dialog-overlay">
+ <div class="dialog-content">
+  <div class="close"></div>
+  <h1>Process</h1>
+  <section class="process" id="process">
+    <!-- / begin PROCESS / -->
+    <div class="gallery scribble">
+    </div>
+    <div class="description">
+      <p class="reveal">
+        This scribble is how I think of the experience strategy formulation&#8212;starts messy but can be refined by applying a structured process. Here is mine:
+      </p>
+      <h2 class="reveal">Discovery</h2>
+      <p class="reveal"><strong>Research:</strong> Stakeholder alignment, goal setting, generative research.</p>
+      <p class="reveal"><strong>Analysis:</strong> Data analysis, domain expert insights, business impact estimation, opportunity and risk assessment.</p>
+      <h2 class="reveal">Solution</h2>
+      <p class="reveal"><strong>Ideate:</strong> Prioritization of use cases, user journey mapping, vision development, product strategy formulation.</p>
+      <p class="reveal"><strong>Test:</strong> Designing experiments, setting goals and defining key metrics, conducting evaluative research, developing change management plans.</p>
+      <h2 class="reveal">Validation</h2>
+      <p class="reveal"><strong>Proof-of-concept:</strong> Launching initial versions to validate core functionalities and gather user feedback.</p>
+      <p class="reveal"><strong>Experiment:</strong> Conducting A/B testing and analyzing results to inform iterative improvements.</p>
+      <p class="reveal"><strong>Build the right way:</strong> Ensuring technical architecture and infrastructure are scalable, sustainable, accessible...</p>
+    </div>
+  </section><!-- / end PROCESS / -->
+</div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" type="text/javascript"></script>
+<script src="jquery.timeago.js" type="text/javascript"></script>
+<script src="stickybits.min.js" type="text/javascript"></script>
+<script src="jquery.swipebox.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+  $(function() {
+
+      // Function to reveal elements as they enter the viewport
+    function revealOnScroll() {
+      $('.reveal').each(function() {
+        var bottom_of_object = $(this).offset().top + $(this).outerHeight() - 50;
+        var bottom_of_window = $(window).scrollTop() + $(window).height();
+          /* If the object is completely visible in the window, fade it in */
+        if (bottom_of_window > bottom_of_object) {
+          $(this).addClass('animated fadeInUp');
+        }
+      });
+    }
+
+      // Run the function on scroll
+    $(window).scroll(revealOnScroll);
+
+      // Trigger the function immediately on page load to animate elements already in the viewport
+    revealOnScroll();
+
+      // Initialize Stickybits for all .close elements
+    stickybits('.close', {
+        stickyClass: 'sticky' // Optional: Add a class when sticky
+      });
+
+      /*
+      --------------------------------------------------------------------
+      DIALOG
+      --------------------------------------------------------------------
+      */
+
+      // Open dialog
+    $('.process-dialog').on('click', function(e) {
+      e.preventDefault();
+      $('#dialogOverlay').fadeIn();
+        $('body').addClass('dialog-open'); // Add dialog-open to prevent scrolling
+      });
+
+      // Close dialog
+    function closeDialog() {
+      $('#dialogOverlay').fadeOut();
+        $('body').removeClass('dialog-open'); // Remove dialog-open to re-enable scrolling
+      }
+
+      // Close on ESC key
+      $(document).on('keydown', function(e) {
+        if (e.key === "Escape") {
+          closeDialog();
+        }
+      });
+
+      // Close on overlay click
+      $('#dialogOverlay').on('click', function(e) {
+        if ($(e.target).is('#dialogOverlay')) {
+          closeDialog();
+        }
+      });
+
+      // Close on close button click
+      $('#dialogOverlay .close').on('click', function() {
+        closeDialog();
+      });
+
+      // Close on any link/button inside the dialog
+      $('.dialog-content').on('click', 'a, button', function() {
+        closeDialog();
+      });
+
+
+
+      /*
+      --------------------------------------------------------------------
+      PROJECTS
+      --------------------------------------------------------------------
+      */
+
+
+
+      $('.project-header').click(function() {
+        $(this).closest('.project-item').find('.project-details').slideToggle();
+      });
+
+      $('.project-item .close').click(function(e) {
+        e.stopPropagation(); // Prevent the header click event from firing
+        $(this).closest('.project-item').find('.project-details').slideUp();
+      });
+
+
+
+      //lightbox
+      $('.gallery a[rel^="p"]').swipebox({
+        hideBarsDelay: 10000
+      });
+
+      //lightbox
+      $('.description a[rel^="p"]').swipebox();
+
+      //smooth scrolling
+      $('a[href*="#"]:not([href="#"])').click(function() {
+        if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+          var target = $(this.hash);
+          target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+          if (target.length) {
+            $('html,body').animate({
+              scrollTop: target.offset().top
+            }, 500);
+            return false;
+          }
+        }
+      });
+
+      //date timestamps
+      $("abbr.timeago,time.timeago").timeago();
+
+      //sticky close buttons
+      //$(".close").pin();
+
+      //recursive function to animate one element after another
+      function nextAnim(elems) {
+        // if we have element, animate it
+        elems.eq(0).fadeIn('fast', function() {
+          nextAnim(elems.slice(1)); // slice off the first element
+        });
+      }
+
+      $(".projects .hidden").hide();
+
+      //expansion of projects
+      $(".projects section.head,.projects .close,.projects .head .learnmore").click(function(event) {
+
+        event.preventDefault();
+        event.stopPropagation();
+
+        var li = $(this).parents('li');
+
+        /*open/slide down the project details*/
+        if (!li.hasClass("expanded")) {
+
+          li.addClass("expanded")
+          .children("section.hidden")
+          .slideDown('slow', 'swing', function() {
+            $(this).siblings('.close').show();
+              //nextAnim($(this).find('.gallery img.thumb,.gallery p'));
+          });
+
+          
+        } else {
+
+          /*close/slide up the project details*/
+          li.children("section.hidden")
+          .slideUp('slow', 'swing', function() {
+            li.removeClass("expanded");
+
+          });
+
+          $('html, body').animate({
+            scrollTop: li.offset().top
+          }, 500, "linear");
+        }
+
+      });
+
+
+      /*
+      --------------------------------------------------------------------
+      VIDEOS
+      --------------------------------------------------------------------
+      */
+
+
+      // Get whatever is behind the "?" in the URL
+      const customizedLanding = window.location.search.substring(1); // Remove the "?"
+      // Acceptable customized landing parameters
+      const validCustomLandings = ['example1', 'example2', 'example3'];
+      const urlParams = new URLSearchParams(window.location.search);
+
+      // Default video sequence
+      const defaultSequence = [
+        'videos/intro.mp4',
+        'videos/highlight.mp4',
+        'videos/outro.mp4'
+      ];
+
+      let videoSequence;
+
+      // Check if the custom video URL parameter is valid
+      if (validCustomLandings.includes(customizedLanding)) {
+        // Use the custom video if it's valid
+        videoSequence = [
+          'videos/intro.mp4',
+          `videos/${customizedLanding}.mp4`, // Use the custom video
+          'videos/outro.mp4'
+        ];
+      } else {
+        // Use the default sequence if the custom video is invalid
+        videoSequence = defaultSequence;
+      }
+
+      let currentVideoIndex = 0;
+
+      // Preload the next video in the sequence
+      function preloadNextVideo() {
+        if (currentVideoIndex + 1 < videoSequence.length) {
+          const nextVideoSrc = videoSequence[currentVideoIndex + 1];
+          const $preloadVideo = $($('.preload-video')[currentVideoIndex]); // Use the next preload slot
+          $preloadVideo.attr('src', nextVideoSrc);
+          $preloadVideo[0].load(); // Force preload
+        }
+      }
+
+      // Function to load and play the next video in the sequence
+      function playNextVideo() {
+        if (currentVideoIndex < videoSequence.length) {
+          $('#videos').attr('src', videoSequence[currentVideoIndex]);
+          $('#videos')[0].play(); // Use [0] to access the native DOM element
+          preloadNextVideo(); // Preload the next video
+          currentVideoIndex++;  
+        } else {
+          // All videos have been played
+          $('.video').hide(); // Hide the video
+          $('#video-desktop-play span').text('Replay'); // Change button text to "Replay"
+          $('#video-overlay').hide(); // Hide the overlay
+          $('.image').removeClass('video-playing').show();
+        }
+      }
+
+      // Preload the second video when the first starts
+      $('#videos').on('play', function() {
+        preloadNextVideo();
+      });
+
+      // Event listener for when the current video ends
+      $('#videos').on('ended', playNextVideo);
+
+      // Event listener for clicking the video element
+      $('#videos').on('click', function() {
+        togglePlayPause();
+      });
+
+      // Function to toggle between play and pause
+      function togglePlayPause() {
+        if ($('#videos')[0].paused) {
+          $('#videos')[0].play();
+          $('#video-overlay').hide(); // Hide the overlay
+        } else {
+          $('#videos')[0].pause();
+          $('#video-overlay').css({
+            'width': $('#videos').width(),
+            'height': $('#videos').height()
+          });
+          $('#video-overlay').stop(); //Stop animation (not sure why this is animated?)
+          $('#video-overlay').show(); //Show the overlay and adjust its w and h
+          trackEvent('button_click', { //GA tracking of video plays
+            'event_category': 'hero',
+            'event_label': 'hero_video_pause'
+          });
+          //sticky close button missing here, add pls.
+
+        }
+      }
+
+      // Event listener for the initial play button
+      $('#video-desktop-play').on('click', function() {
+        if ($('#video-desktop-play span').text() === 'Replay') {
+          // Replay the sequence
+          resetVideoSequence();
+          $('.video').show();
+          $('.image').hide();
+          $('.hello').addClass('video-playing'); //Tweak the background if needed
+          $('#video-overlay').hide(); // Hide the overlay
+          playNextVideo();
+          trackEvent('button_click', { //GA tracking of video plays
+            'event_category': 'hero',
+            'event_label': 'hero_video_intro_re_play'
+          });
+        } else {
+          // Start playing the sequence for the first time
+          $('.video').show();
+          $('.image').hide();
+          $('.hello').addClass('video-playing'); //Tweak the background if needed
+          playNextVideo();
+          trackEvent('button_click', { //GA tracking of video plays
+            'event_category': 'hero',
+            'event_label': 'hero_video_intro_first_play'
+          });
+        }
+      });
+
+
+
+      // Event listener for the overlay play button
+      $('#video-overlay').on('click', function() {
+        $('#videos')[0].play();
+        $('#video-overlay').hide(); // Hide the overlay
+      });
+
+      // Event listener for the close button
+      $('#video-overlay-close').on('click', function(event) {
+        event.stopPropagation();
+        resetVideoSequence();
+        $('.video').hide(); // Hide the video
+        $('#video-overlay').hide(); // Hide the overlay
+        $('#video-desktop-play span').text('Play intro');
+        $('.image').show(); // Show the hero section
+        $('.hello').removeClass('video-playing'); //Tweak the background if needed
+        trackEvent('button_click', { //GA tracking of video plays
+            'event_category': 'hero',
+            'event_label': 'hero_video_intro_close'
+          });
+      });
+
+      // Function to reset the video sequence to the beginning
+      function resetVideoSequence() {
+        currentVideoIndex = 0; // Reset the sequence
+        $('#videos').attr('src', videoSequence[0]); // Reset to the first video
+        $('#videos')[0].pause(); // Pause the video
+        //console.log('stopped' + $('#videos')[0].paused);
+      }
+
+
+      /*
+      --------------------------------------------------------------------
+      FILTERS
+      --------------------------------------------------------------------
+      */
+
+      // Define mappings between URL parameters and filters
+      const filterMappings = {
+        data: ["Data"],
+        ai: ["AI/ML"],
+        ecomm: ["E-commerce"],
+        strategy: ["Strategy"], //Dentsply Sirona
+        id: ["HCI"],
+        reg: ["Highly-regulated"],
+        travel: ["Travel"],
+        finance: ["Finance"],
+        advertising: ["AI/ML"], //reddit ads director (also covers Advertising)
+        marketplaces: ["B2B2C"], //shibsted
+        googleshopping: ["E-commerce"] //google
+      };
+
+      let selectedTags = []; // Array to store selected tags
+
+      // Function to update the filter
+      function updateFilter() {
+        // Remove all highlighting first
+        $('.tag').removeClass('highlighted-tag');
+
+        if (selectedTags.length === 0) {
+          // Reset to "Show all" state
+          $('.filter-button').removeClass('active');
+          $('.filter-button[data-filter="all"]').addClass('active');
+          $('.head').show();
+          $('#no-results-message').hide();
+          return;
+        }
+
+        // Rest of your existing filter logic...
+        $('.head').hide();
+        let matchingProjects = 0;
+
+        $('.head').each(function() {
+          const $project = $(this);
+          const projectTags = $project.find('.tag').map(function() {
+            return $(this).text();
+          }).get();
+
+          const hasAllTags = selectedTags.every(tag => projectTags.includes(tag));
+
+          if (hasAllTags) {
+            matchingProjects++;
+            $project.show();
+            
+            // Highlight matching tags
+            $project.find('.tag').each(function() {
+              if (selectedTags.includes($(this).text())) {
+                $(this).addClass('highlighted-tag');
+              }
+            });
+          }
+        });
+
+        if (matchingProjects === 0) {
+          $('#no-results-message').show();
+        } else {
+          $('#no-results-message').hide();
+        }
+      }
+
+      // Function to select filters based on URL parameters
+      function applyFiltersFromURL() {
+
+        // Check each URL parameter
+        urlParams.forEach((value, key) => {
+          if (filterMappings[key]) {
+            // Add the corresponding filters
+            filterMappings[key].forEach(tag => {
+              if (!selectedTags.includes(tag)) {
+                selectedTags.push(tag);
+                $(`.filter-button[data-filter="${tag}"]`).addClass('active');
+              }
+            });
+
+            // Remove "active" class from "Show All" if other tags are selected
+            if (selectedTags.length > 0) {
+              $('.filter-button[data-filter="all"]').removeClass('active');
+            }
+          }
+        });
+
+        // Update the filter
+        updateFilter();
+      }
+
+      // Apply filters from URL parameters on page load
+      applyFiltersFromURL();
+
+      // When a filter button is clicked
+      $('.filter-button').on('click', function() {
+        const filterValue = $(this).data('filter');
+
+        if (filterValue === 'all') {
+          // Reset to show all projects
+          selectedTags = [];
+          $('.filter-button').removeClass('active');
+          $(this).addClass('active');
+        } else {
+          // Toggle the selected tag
+          if (selectedTags.includes(filterValue)) {
+            // Remove the tag if already selected
+            selectedTags = selectedTags.filter(tag => tag !== filterValue);
+            $(this).removeClass('active');
+          } else {
+            // Add the tag if not selected
+            selectedTags.push(filterValue);
+            $(this).addClass('active');
+          }
+
+          // Remove "active" class from "Show All" if other tags are selected
+          if (selectedTags.length > 0) {
+            $('.filter-button[data-filter="all"]').removeClass('active');
+          }
+        }
+
+        updateFilter();
+
+      });
+
+      // When a tag link is clicked elsewhere on the website
+      $('.tag-link').on('click', function(e) {
+        e.preventDefault();
+        
+        // Get the filter value(s) - supports single tag or space-separated tags
+        const filterValues = $(this).data('filter').split(' ');
+        
+        // Reset all filters
+        selectedTags = [];
+        $('.filter-button').removeClass('active');
+        
+        // Apply only the clicked tag(s)
+        filterValues.forEach(filterValue => {
+          if (filterValue) { // Ensure valid value
+            selectedTags.push(filterValue);
+            $(`.filter-button[data-filter="${filterValue}"]`).addClass('active');
+          }
+        });
+        
+        // Update UI
+        $('.filter-button[data-filter="all"]').removeClass('active');
+        updateFilter();
+        
+        // Smooth scroll to projects
+        $('html, body').animate({
+          scrollTop: $('#projects').offset().top - 50
+        }, 500);
+      });
+
+      // When the "Show all?" link in the message is clicked
+      $('#no-results-message a').on('click', function(e) {
+        e.preventDefault(); // Prevent default link behavior
+
+        // Reset to show all projects
+        selectedTags = [];
+        $('.filter-button').removeClass('active');
+        $('.filter-button[data-filter="all"]').addClass('active');
+        $('.head').show(); // Show all projects
+        $('#no-results-message').hide(); // Hide the "no results" message
+      });
+    });
+
+
+  </script>
+
+</body>
+</html>
