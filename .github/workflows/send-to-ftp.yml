@@ -1,11 +1,8 @@
 name: 🚀 Deploy portfolio on FTP
 
-on: push
-
-# Let's test this first before creating a release.
-# on: 
-  # release:
-    # types: [created]
+on: 
+  release:
+    types: [created]
 
 jobs:
   web-deploy:
@@ -18,8 +15,13 @@ jobs:
     - name: FTP Deploy
       uses: SamKirkland/FTP-Deploy-Action@v4.3.5
       with:
-        log-level: verbose
-        server: ftp://skopp.sk/sub/jules
+        protocol: ftps
+        server: skopp.sk
+        server-dir: sub/jules/
         username: ${{ secrets.FTP_USERNAME }}
         password: ${{ secrets.FTP_PASS }}
-        dry-run: true
+        exclude: |
+          **/.git*
+          **/.git*/**
+          **/node_modules/**
+          videos/**
