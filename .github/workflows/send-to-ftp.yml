@@ -1,8 +1,11 @@
 name: 🚀 Deploy portfolio on FTP
 
-on: 
-  release:
-    types: [created]
+on: push
+
+# Let's test this first before creating a release.
+# on: 
+  # release:
+    # types: [created]
 
 jobs:
   web-deploy:
