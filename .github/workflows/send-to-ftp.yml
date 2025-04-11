@@ -18,7 +18,7 @@ jobs:
     - name: FTP Deploy
       uses: SamKirkland/FTP-Deploy-Action@v4.3.5
       with:
-        protocol: sftp
+        protocol: ftps
         server: ${{ secrets.FTP_ADDRESS }}
         server-dir: /sub/jules/
         username: ${{ secrets.FTP_USERNAME }}
