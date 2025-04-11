@@ -19,7 +19,7 @@ jobs:
       uses: SamKirkland/FTP-Deploy-Action@v4.3.5
       with:
         log-level: verbose
-        server: ftps://skopp.sk/sub/jules
+        server: ftp://skopp.sk/sub/jules
         username: ${{ secrets.FTP_USERNAME }}
         password: ${{ secrets.FTP_PASS }}
         dry-run: true
