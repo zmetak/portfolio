@@ -2153,7 +2153,8 @@
           $('.video').hide(); // Hide the video
           $('#video-desktop-play span').text('Replay'); // Change button text to "Replay"
           $('#video-overlay').hide(); // Hide the overlay
-          $('.image').removeClass('video-playing').show();
+          $('.image').show();
+          $('.hello').removeClass('video-playing'); //remove the dark background of the hello container in case the video is smaller
         }
       }
 
@@ -2199,7 +2200,7 @@
           resetVideoSequence();
           $('.video').show();
           $('.image').hide();
-          $('.hello').addClass('video-playing'); //Tweak the background if needed
+          $('.hello').addClass('video-playing'); //Tweak the dark background if needed
           $('#video-overlay').hide(); // Hide the overlay
           playNextVideo();
           trackEvent('button_click', { //GA tracking of video plays
@@ -2210,7 +2211,7 @@
           // Start playing the sequence for the first time
           $('.video').show();
           $('.image').hide();
-          $('.hello').addClass('video-playing'); //Tweak the background if needed
+          $('.hello').addClass('video-playing'); //Tweak the dark background if needed
           playNextVideo();
           trackEvent('button_click', { //GA tracking of video plays
             'event_category': 'hero',
