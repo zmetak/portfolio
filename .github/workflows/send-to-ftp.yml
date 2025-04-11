@@ -20,3 +20,8 @@ jobs:
         server-dir: sub/jules/
         username: ${{ secrets.FTP_USERNAME }}
         password: ${{ secrets.FTP_PASS }}
+        exclude: |
+          **/.git*
+          **/.git*/**
+          **/node_modules/**
+          videos/**
