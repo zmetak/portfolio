@@ -19,6 +19,7 @@ jobs:
       uses: SamKirkland/FTP-Deploy-Action@v4.3.5
       with:
         protocol: ftps
+        port: 22
         server: ${{ secrets.FTP_ADDRESS }}
         server-dir: /sub/jules/
         username: ${{ secrets.FTP_USERNAME }}
