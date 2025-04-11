@@ -19,6 +19,6 @@ jobs:
       uses: SamKirkland/FTP-Deploy-Action@v4.3.5
       with:
         server: ${{ secrets.FTP_ADDRESS }}
-        username: ${{ secrets.FTP_USER }}
+        username: ${{ secrets.FTP_USERNAME }}
         password: ${{ secrets.FTP_PASS }}
         dry-run: true
