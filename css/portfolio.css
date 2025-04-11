@@ -1330,4 +1330,8 @@ ANIMATIONS
    which conflicts with the photoswipe features. So the styles below
    will override these styles to reset them back to default.
 */
-img	{ max-width: initial; max-height: initial; vertical-align: initial; } 
+img	{ 
+  max-width: initial;
+  max-height: initial;
+  vertical-align: initial;
+} 
