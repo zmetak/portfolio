@@ -18,8 +18,11 @@ jobs:
     - name: FTP Deploy
       uses: SamKirkland/FTP-Deploy-Action@v4.3.5
       with:
+        protocol: ftps
+        port: 22
         log-level: verbose
-        server: ftp://skopp.sk/sub/jules
+        server: skopp.sk
+        server-dir: sub/jules
         username: ${{ secrets.FTP_USERNAME }}
         password: ${{ secrets.FTP_PASS }}
         dry-run: true
