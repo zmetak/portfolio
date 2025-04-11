@@ -18,8 +18,9 @@ jobs:
     - name: FTP Deploy
       uses: SamKirkland/FTP-Deploy-Action@v4.3.5
       with:
-        protocol: ftps
+        protocol: ftps-legacy
         port: 22
+        log-level: verbose
         server: ${{ secrets.FTP_ADDRESS }}
         server-dir: /sub/jules/
         username: ${{ secrets.FTP_USERNAME }}
