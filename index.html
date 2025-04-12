@@ -1982,7 +1982,7 @@
 
       // Close dialog
     function closeDialog() {
-      $('#dialogOverlay').fadeOut();
+        $('#dialogOverlay').fadeOut();
         $('body').removeClass('dialog-open'); // Remove dialog-open to re-enable scrolling
       }
 
@@ -2019,17 +2019,6 @@
       */
 
 
-
-      $('.project-header').click(function() {
-        $(this).closest('.project-item').find('.project-details').slideToggle();
-      });
-
-      $('.project-item .close').click(function(e) {
-        e.stopPropagation(); // Prevent the header click event from firing
-        $(this).closest('.project-item').find('.project-details').slideUp();
-      });
-
-
       //smooth scrolling
       $('a[href*="#"]:not([href="#"])').click(function() {
         if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
@@ -2060,7 +2049,7 @@
 
       $(".projects .hidden").hide();
 
-      //expansion of projects
+      //expansion or closing of projects
       $(".projects section.head,.projects .close,.projects .head .learnmore").click(function(event) {
 
         event.preventDefault();
@@ -2068,12 +2057,13 @@
 
         var li = $(this).parents('li');
 
-        /*open/slide down the project details*/
+        /* expand the project details */
         if (!li.hasClass("expanded")) {
 
           li.addClass("expanded")
           .children("section.hidden")
           .slideDown('slow', 'swing', function() {
+            /* show the close button once the expanding animation is finished */
             $(this).siblings('.close').show();
               //nextAnim($(this).find('.gallery img.thumb,.gallery p'));
           });
@@ -2081,13 +2071,13 @@
           
         } else {
 
-          /*close/slide up the project details*/
+          /* retract the project details */
           li.children("section.hidden")
           .slideUp('slow', 'swing', function() {
             li.removeClass("expanded");
-
           });
 
+          /* scroll to the project head */ 
           $('html, body').animate({
             scrollTop: li.offset().top
           }, 500, "linear");
@@ -2279,8 +2269,12 @@
 
       // Function to update the filter
       function updateFilter() {
-        // Remove all highlighting first
-        $('.tag').removeClass('highlighted-tag');
+        // Remove all highlighting inside of the project results first
+        $('.tag').removeClass('highlighted');
+        
+        //hide all the expanded projects + close button
+        $('.details.hidden').hide();
+        $('.expanded').removeClass("expanded").siblings('.close').hide();
 
         if (selectedTags.length === 0) {
           // Reset to "Show all" state
@@ -2291,7 +2285,6 @@
           return;
         }
 
-        // Rest of your existing filter logic...
         $('.head').hide();
         let matchingProjects = 0;
 
@@ -2310,7 +2303,7 @@
             // Highlight matching tags
             $project.find('.tag').each(function() {
               if (selectedTags.includes($(this).text())) {
-                $(this).addClass('highlighted-tag');
+                $(this).addClass('highlighted');
               }
             });
           }
