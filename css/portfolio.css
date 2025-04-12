@@ -1438,3 +1438,9 @@ img	{
   max-height: initial;
   vertical-align: initial;
 } 
+
+/* For modern browsers, use :focus-visible to only show focus outline for keyboard navigation, not mouse clicks: */
+:focus-visible {
+  outline: 2px solid #86ae8c;
+  outline-offset: 2px;
+}
