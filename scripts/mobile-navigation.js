@@ -167,7 +167,7 @@ $(document).ready(function () {
    */
   function handleNavigation(event) {
     const target = $(event.target).attr("href");
-    if (target.startsWith("#")) {
+    if (typeof target === "string" && target.startsWith("#") && target.length > 1) {
       event.preventDefault();
       closeMobileNav(() => {
         $("html, body").animate(
@@ -177,6 +177,8 @@ $(document).ready(function () {
           500
         );
       });
+    } else {
+      closeMobileNav();
     }
   }
 
