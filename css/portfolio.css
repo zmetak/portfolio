@@ -410,7 +410,6 @@ PROJECTS --- HEAD
 }
 
 .projects .scribble {
-  min-height: 900px;
   background: transparent url(../images/scribble-2.svg) 1px -30px no-repeat;
   background-size: 285px 1550px;
 }
