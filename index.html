@@ -84,6 +84,21 @@
             Jules Skopp
           </h2>
         </div>
+        <div class="nav-toggle-open" aria-label="open navigation menu" role="button" tabindex="0">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+
+        <!-- Container for mobile nav. Content of the nav element will be appended here -->
+        <div class="mobile-nav-container" style="display: none; position:relative">
+          <div class="nav-toggle-close displayNone" aria-label="close navigation menu" role="button" tabindex="0">
+            <span class="bar x"></span>
+            <span class="bar x"></span>
+            <span class="bar x"></span>
+          </div>
+        </div>
+       
         <!-- / end MOBILE NAV / -->
       </div>
       <section class="hello" id="hello">
@@ -110,7 +125,7 @@
           <div class="hero-description">
             <p class="animated fadeIn">
               I&#39;m an executive product leader with a passion for data-powered experiences. Co-founder of Design Leadership Therapy and a speaker on data, leadership, and product strategies.
-              <a href="jules-skopp-2025-resume.pdf" class="learnmore"><i class="fa fa-file-pdf-o"></i>Download my resume</a>
+              <a href="https://jules.skopp.sk/jules-skopp-2025-resume.pdf" class="learnmore"><i class="fa fa-file-pdf-o"></i>Download my resume</a>
             </p>
             
             <button id="video-desktop-play" class="play">
@@ -1866,41 +1881,41 @@
   <nav class="navigation clearfix" id="navigation">
     <ul class="sf-menu menu">
       <li class="menu-item menu-item-type-post_type menu-item-object-page">
-        <a href="#content">Hello</a>
+        <a tabindex="0" href="#content">Hello</a>
       </li>
       <li class="menu-item menu-item-type-post_type menu-item-object-page">
-        <a href="#skills">Skills</a>
+        <a tabindex="0" href="#skills">Skills</a>
       </li>
       <li class="menu-item menu-item-type-post_type menu-item-object-page">
-        <a href="#projects">Projects</a>
+        <a tabindex="0" href="#projects">Projects</a>
       </li>
       <li class="menu-item menu-item-type-post_type menu-item-object-page">
-        <a href="#" class="process-dialog">Process</a>
+        <a tabindex="0" href="#" class="process-dialog">Process</a>
       </li>
       <li class="menu-item menu-item-type-post_type menu-item-object-page">
-        <a href="#contact">Contact</a>
+        <a tabindex="0" href="#contact">Contact</a>
       </li>
       <li class="menu-item menu-item-type-post_type menu-item-object-page">
-        <a href="jules-skopp-2025-resume.pdf"><i class="fa fa-file-pdf-o"></i> Resume</a>
+        <a tabindex="0" href="jules-skopp-2025-resume.pdf" target="_blank"><i class="fa fa-file-pdf-o"></i>Resume</a>
       </li>
       <li class="menu-item menu-item-type-post_type menu-item-object-page">
-        <a href="https://uxthis.blogspot.com" target="_blank"><i class="fa fa-external-link"></i>Blog</a>
+        <a tabindex="0" href="https://uxthis.blogspot.com" target="_blank"><i class="fa fa-external-link"></i>Blog</a>
       </li>
               <!--
               <li class="menu-item menu-item-type-post_type menu-item-object-page">
-              <a href="jules-skopp-2013-portfolio.pdf"><i class="fa fa-file-pdf-o"></i> 2013 portfolio</a></li>
+              <a href="jules-skopp-2013-portfolio.pdf" target="_blank"><i class="fa fa-file-pdf-o"></i> 2013 portfolio</a></li>
       -->
     </ul>
   </nav>
 
   <div class="social">
-    <a href="https://www.linkedin.com/in/juliusskopp" title="LinkedIn profile" target="_blank">
+    <a tabindex="0" href="https://www.linkedin.com/in/juliusskopp" title="LinkedIn profile" target="_blank">
       <i class="fa fa-linkedin"></i>
     </a>
-    <a href="https://twitter.com/zmetak" title="Twitter profile" target="_blank">
+    <a tabindex="0" href="https://twitter.com/zmetak" title="Twitter profile" target="_blank">
       <i class="fa fa-twitter"></i>
     </a>
-    <a href="https://www.facebook.com/jules.skopp" title="Facebook profile" target="_blank">
+    <a tabindex="0" href="https://www.facebook.com/jules.skopp" title="Facebook profile" target="_blank">
       <i class="fa fa-facebook"></i>
     </a>
   </div>
@@ -2428,5 +2443,10 @@
 
     lightbox.init();
   </script>
+      
+  <!------------------------------------------------------------------
+  MOBILE NAVIGATION
+  ------------------------------------------------------------------->
+  <script src="./scripts/mobile-navigation.js"></script>
 </body>
 </html>
