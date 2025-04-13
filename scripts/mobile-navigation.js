@@ -182,8 +182,11 @@ $(document).ready(function () {
     }
   }
 
-  // When an item on with an href value that starts with a "#" close the navigation and scroll to that section
-  $mobileNavContainer.on("click", handleNavigation);
+  // Attach a click handler to each link element in the mobile nav
+  $mobileNav.find('li.menu-item > a').on('click', function(event) {
+    handleNavigation(event);
+  });
+  
   $mobileNavContainer.on("keydown", function (event) {
     if (["Enter"].includes(event.key)) {
       handleNavigation(event);
