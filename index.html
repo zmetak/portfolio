@@ -2032,6 +2032,28 @@
       --------------------------------------------------------------------
       */
 
+      function showProjectSection ($projectListElement) {
+        $projectListElement.addClass("expanded")
+          .children("section.hidden")
+          .slideDown('slow', 'swing', function() {
+            /* show the close button once the expanding animation is finished */
+            $(this).siblings('.close').show().focus();
+              //nextAnim($(this).find('.gallery img.thumb,.gallery p'));
+          });
+      }
+
+      function hideProjectSection($projectListElement) {
+          /* retract the project details */
+          $projectListElement.children("section.hidden")
+          .slideUp('slow', 'swing', function() {
+            $projectListElement.removeClass("expanded");
+          });
+
+          /* scroll to the project head */ 
+          $('html, body').animate({
+            scrollTop: $projectListElement.offset().top
+          }, 500, "linear");
+      }
 
       //smooth scrolling
       $('a[href*="#"]:not([href="#"])').click(function() {
@@ -2073,31 +2095,21 @@
 
         /* expand the project details */
         if (!li.hasClass("expanded")) {
-
-          li.addClass("expanded")
-          .children("section.hidden")
-          .slideDown('slow', 'swing', function() {
-            /* show the close button once the expanding animation is finished */
-            $(this).siblings('.close').show();
-              //nextAnim($(this).find('.gallery img.thumb,.gallery p'));
-          });
-          
+          showProjectSection(li);
         } else {
-
-          /* retract the project details */
-          li.children("section.hidden")
-          .slideUp('slow', 'swing', function() {
-            li.removeClass("expanded");
-          });
-
-          /* scroll to the project head */ 
-          $('html, body').animate({
-            scrollTop: li.offset().top
-          }, 500, "linear");
+          hideProjectSection(li);
         }
-
       });
 
+      // Add a keydown handler to each of the project's close buttons for better accessibility
+      $('#projects li').each(function() {
+        const $li = $(this);
+        $($li).find('.close').on('keydown', function (event) {
+          if ($li.hasClass('expanded') && event.key === 'Enter') {
+            hideProjectSection($li);
+          }
+        })
+      })
 
       /*
       --------------------------------------------------------------------
