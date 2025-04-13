@@ -1925,10 +1925,10 @@
 </div><!-- / end MENU / -->     
 </div><!-- / end CONTAINER / -->
 
-<div id="dialogOverlay" class="dialog-overlay">
+<div id="dialogOverlay" class="dialog-overlay" role="dialog" aria-labelledby="dialog-title">
  <div class="dialog-content">
   <div role="button" aria-label="Close" class="close" tabindex="0"></div>
-  <h1>Process</h1>
+  <h1 id="dialog-title">Process</h1>
   <section class="process" id="process">
     <!-- / begin PROCESS / -->
     <div class="gallery scribble">
@@ -1990,14 +1990,18 @@
       // Open dialog
     $('.process-dialog').on('click', function(e) {
       e.preventDefault();
-      $('#dialogOverlay').fadeIn();
+      const $dialog = $('#dialogOverlay');
+      $dialog.fadeIn();
         $('body').addClass('dialog-open'); // Add dialog-open to prevent scrolling
+        window.trapFocus($dialog);
       });
 
       // Close dialog
     function closeDialog() {
-        $('#dialogOverlay').fadeOut();
+      const $overlay = $('#dialogOverlay');
+      $overlay.fadeOut();
         $('body').removeClass('dialog-open'); // Remove dialog-open to re-enable scrolling
+        window.releaseFocusTrap($overlay);
       }
 
       // Close on ESC key
@@ -2017,6 +2021,13 @@
       // Close on close button click
       $('#dialogOverlay .close').on('click', function() {
         closeDialog();
+      });  
+      
+      // Let the keyboard close the dialog for better accesibility
+      $('#dialogOverlay .close').on('keydown', function(event) {
+        if (event.key === 'Enter') {
+          closeDialog();
+        }
       });
 
       // Close on any link/button inside the dialog

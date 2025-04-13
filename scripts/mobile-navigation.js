@@ -98,7 +98,7 @@ $(document).ready(function () {
   }
 
   // Get a copy of the existing nav element on the page to use for the mobile nav
-  const $mobileNav = $(".nav").clone().addClass("mobile-nav-clone");
+  const $mobileNav = $(".nav").clone(true).addClass("mobile-nav-clone");
 
   // Set acessibility atttributes on the mobile nav
   $mobileNav.attr({
@@ -114,7 +114,7 @@ $(document).ready(function () {
     left: 0,
     width: "100%",
     height: "100%",
-    zIndex: 10001,
+    zIndex: 700,
     display: "block",
     overflowY: "auto",
     padding: "45px",
@@ -126,7 +126,7 @@ $(document).ready(function () {
     left: 0,
     width: "100%",
     height: "100%",
-    zIndex: 10000,
+    zIndex: 699,
     overflowY: "auto",
     padding: "45px",
     backgroundColor: "#273538",
@@ -189,4 +189,9 @@ $(document).ready(function () {
       handleNavigation(event);
     }
   });
+
+  // Expose these methods so they can be used by other parts of the app.
+  // TODO: Move these methods to a more decided utility so they don't need to be attached to the window object.
+  window.trapFocus = trapFocus;
+  window.releaseFocusTrap = releaseFocusTrap;
 });
