@@ -2170,10 +2170,6 @@
           $('#video-overlay').hide(); // Hide the overlay
         } else {
           $('#videos')[0].pause();
-          $('#video-overlay').css({
-            'width': $('#videos').width(),
-            'height': $('#videos').height()
-          });
           $('#video-overlay').stop(); //Stop animation (not sure why this is animated?)
           $('#video-overlay').show(); //Show the overlay and adjust its w and h
           trackEvent('button_click', { //GA tracking of video plays
