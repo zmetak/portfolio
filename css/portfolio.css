@@ -9,6 +9,7 @@ body {
   display: flex;
   width: 1300px;
   margin: 50px 0;
+  flex-direction: row-reverse;
 }
 
 .content {
@@ -137,6 +138,105 @@ NAV
   opacity: 1;
 }
 
+/* Mobile Nav Toggle (i.e., Hamburger Button) */
+.nav-toggle-open,
+.nav-toggle-close {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 22px;
+  width: 28px;
+  cursor: pointer;
+  padding-left: 16px; 
+}
+
+.nav-toggle-open { z-index: 699; position: absolute; top:55px; right: 25px; }
+.nav-toggle-close { z-index: 701; position: fixed; top: 106px; right: 47px; } 
+
+.mobile-nav-clone .logo-right h2 { line-height: normal }
+
+@media only screen and (max-width: 1279px) {
+  .nav-toggle-close { z-index: 701; position: fixed; top: 55px; right: 24px; } 
+}
+
+.nav-toggle-open .bar,
+.nav-toggle-close .bar {
+  height: 3px;
+  width: 100%;
+  background-color: white;
+  transition: all 200ms ease-in-out;
+}
+
+.nav-toggle-open:hover,
+.nav-toggle-close:hover {
+  cursor: pointer;
+}
+
+.nav-toggle-open::before,
+.nav-toggle-close::before {
+  content: '';
+  position: absolute;
+  left: 0px;
+  top: -20px;
+  height: 300%;
+  width: 1px;
+  background-color: #797979;
+}
+
+.x:nth-of-type(1) {
+  transform: rotate(45deg);
+  transform-origin: top left;
+  width: 28px;
+}
+
+.x:nth-of-type(2) {
+  width: 0;
+  opacity: 0;
+}
+
+.x:nth-of-type(3) {
+  transform: rotate(-45deg);
+  transform-origin: bottom left;
+  width: 28px;
+}
+
+.nav-toggle-open:focus,
+.nav-toggle-close:focus {
+  outline: none;
+}
+
+.nav-toggle-open:focus .bar,
+.nav-toggle-close:focus .x {
+  background-color: #86ae8c;
+}
+
+.mobile-nav-clone, 
+.mobile-nav-clone nav.navigation,
+.mobile-nav-clone .social {
+  margin: 0;
+}
+
+.mobile-nav-clone .navigation > ul > li > a { font-size: 18px; }
+
+
+/* Scroll lock */
+body.lock-scroll {
+  overflow: hidden;
+}
+
+/* Style all nav menu links when focused */
+nav a:focus,
+nav a:focus-visible {
+  color: #86ae8c !important;
+}
+
+/* Style icons inside focused social links */
+.social a:focus i,
+.social a:focus-visible i {
+  color: #86ae8c !important;
+}
+
+.displayNone { display: none !important; }
 
 
 /*
@@ -906,6 +1006,11 @@ ANIMATIONS
   /* ----- NAV & LAYOUT ----- */
   .mobile-menu-wrapper { 
     display: block; /*overrides master.css*/
+    position: relative;
+  }
+
+  .nav-toggle-open {
+    display: hidden;
   }
 
   .widget {
@@ -1320,17 +1425,39 @@ ANIMATIONS
 
 }
 
-/* Overrides of styles in uxthis.skopp.sk-master.css */
+/* For modern browsers, use :focus-visible to only show focus outline for keyboard navigation, not mouse clicks: */
+:focus-visible {
+  outline: 2px solid #86ae8c;
+  outline-offset: 2px;
+}
 
-/* uxthis.skopp.sk-master.css defines a style like this: 
+/*
+* ------------------------------------------------------------------------
+* BELOW ARE OVERWRITES OF THE STYLES DEFINED IN uxthis.skopp.sk/master.css
+* ------------------------------------------------------------------------
+*/
+
+/* 
+uxthis.skopp.sk/master.css defines a style like this: 
 
    img { max-width: 100%; max-height: 100%; vertical-align: bottom; }
 
-   which conflicts with the photoswipe features. So the styles below
-   will override these styles to reset them back to default.
+which conflicts with the photoswipe features. So the styles below
+will override these styles to reset them back to default.
 */
 img	{ 
   max-width: initial;
   max-height: initial;
   vertical-align: initial;
-} 
+}
+
+/* 
+uxthis.skopp.sk/master.css defines a padding which breaks the outline for keyboard navigation. Moving the padding to a margin solves this.
+*/
+.navigation > ul > li > a {
+  font-size: 15px;
+  padding: 0;
+  display: block;
+  margin-bottom: 15px;
+}
+

@@ -75,6 +75,58 @@
 <body>
   <div class="container">
     <!-- / begin CONTAINER / -->
+
+    <!-- / begin MENU / -->
+<div class="nav">
+
+  <div class="logo logo-right">
+    <h2>J.Skopp</h2>
+  </div>
+
+  <nav class="navigation clearfix" id="navigation">
+    <ul class="sf-menu menu">
+      <li class="menu-item menu-item-type-post_type menu-item-object-page">
+        <a tabindex="0" href="#hello">Hello</a>
+      </li>
+      <li class="menu-item menu-item-type-post_type menu-item-object-page">
+        <a tabindex="0" href="#skills">Skills</a>
+      </li>
+      <li class="menu-item menu-item-type-post_type menu-item-object-page">
+        <a tabindex="0" href="#projects">Projects</a>
+      </li>
+      <li class="menu-item menu-item-type-post_type menu-item-object-page">
+        <a tabindex="0" href="#" class="process-dialog">Process</a>
+      </li>
+      <li class="menu-item menu-item-type-post_type menu-item-object-page">
+        <a tabindex="0" href="#contact">Contact</a>
+      </li>
+      <li class="menu-item menu-item-type-post_type menu-item-object-page">
+        <a tabindex="0" href="jules-skopp-2025-resume.pdf" target="_blank"><i class="fa fa-file-pdf-o"></i>Resume</a>
+      </li>
+      <li class="menu-item menu-item-type-post_type menu-item-object-page">
+        <a tabindex="0" href="https://uxthis.blogspot.com" target="_blank"><i class="fa fa-external-link"></i>Blog</a>
+      </li>
+              <!--
+              <li class="menu-item menu-item-type-post_type menu-item-object-page">
+              <a href="jules-skopp-2013-portfolio.pdf" target="_blank"><i class="fa fa-file-pdf-o"></i> 2013 portfolio</a></li>
+      -->
+    </ul>
+  </nav>
+
+  <div class="social">
+    <a tabindex="0" href="https://www.linkedin.com/in/juliusskopp" title="LinkedIn profile" target="_blank">
+      <i class="fa fa-linkedin"></i>
+    </a>
+    <a tabindex="0" href="https://twitter.com/zmetak" title="Twitter profile" target="_blank">
+      <i class="fa fa-twitter"></i>
+    </a>
+    <a tabindex="0" href="https://www.facebook.com/jules.skopp" title="Facebook profile" target="_blank">
+      <i class="fa fa-facebook"></i>
+    </a>
+  </div>
+</div><!-- / end MENU / -->     
+
+
     <div class="content">
       <!-- / begin CONTENT / -->          
       <div class="widget mobile-menu-wrapper">
@@ -84,6 +136,21 @@
             Jules Skopp
           </h2>
         </div>
+        <div class="nav-toggle-open" aria-label="open navigation menu" role="button" tabindex="0">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+
+        <!-- Container for mobile nav. Content of the nav element will be appended here -->
+        <div class="mobile-nav-container" style="display: none; position:relative">
+          <div class="nav-toggle-close displayNone" aria-label="close navigation menu" role="button" tabindex="0">
+            <span class="bar x"></span>
+            <span class="bar x"></span>
+            <span class="bar x"></span>
+          </div>
+        </div>
+       
         <!-- / end MOBILE NAV / -->
       </div>
       <section class="hello" id="hello">
@@ -97,7 +164,7 @@
               <i class="fa fa-play"></i>
               <span>Resume</span>
             </button>
-            <div id="video-overlay-close" class="close"></div>
+            <div role="button" tabindex="0" aria-label="Close video overlay" id="video-overlay-close" class="close"></div>
           </div>
           <!-- Hidden preload videos -->
           <video class="preload-video" preload="auto" muted></video>
@@ -110,7 +177,7 @@
           <div class="hero-description">
             <p class="animated fadeIn">
               I&#39;m an executive product leader with a passion for data-powered experiences. Co-founder of Design Leadership Therapy and a speaker on data, leadership, and product strategies.
-              <a href="jules-skopp-2025-resume.pdf" class="learnmore"><i class="fa fa-file-pdf-o"></i>Download my resume</a>
+              <a href="https://jules.skopp.sk/jules-skopp-2025-resume.pdf" class="learnmore"><i class="fa fa-file-pdf-o"></i>Download my resume</a>
             </p>
             
             <button id="video-desktop-play" class="play">
@@ -175,7 +242,7 @@
         </div>
         <ul>
           <li class="p21">
-            <div class="close"></div>
+            <div role="button" aria-label="Close" class="close" tabindex="0"></div>
             <!-- Project when collapsed -->
             <section class="head line" id="head_p21">
               <div class="gallery reveal">
@@ -245,7 +312,7 @@
           </li>
 
           <li class="p20">
-            <div class="close"></div>
+            <div role="button" aria-label="Close" class="close" tabindex="0"></div>
             <section class="head line" id="head_p20">
               <div class="gallery reveal">
                 <div class="rhombus"></div>
@@ -283,7 +350,7 @@
           </li>
 
           <li class="p19">
-            <div class="close"></div>
+            <div role="button" aria-label="Close" class="close" tabindex="0"></div>
             <section class="head line" id="head_p19">
               <div class="gallery reveal">
                 <div class="rhombus"></div>
@@ -342,7 +409,7 @@
           </li>
 
           <li class="p18">
-            <div class="close"></div>
+            <div role="button" aria-label="Close" class="close" tabindex="0"></div>
             <section class="head line" id="head_p18">
               <div class="gallery reveal">
                 <div class="rhombus"></div>
@@ -389,7 +456,7 @@
           </li>
 
           <li class="p17">
-            <div class="close"></div>
+            <div role="button" aria-label="Close" class="close" tabindex="0"></div>
             <section class="head line" id="head_p17">
               <div class="gallery reveal">
                 <div class="rhombus"></div>
@@ -440,7 +507,7 @@
           </li>
 
           <li class="p16">
-            <div class="close"></div>
+            <div role="button" aria-label="Close" class="close" tabindex="0"></div>
             <section class="head line" id="head_p16">
               <div class="gallery reveal">
                 <div class="rhombus"></div>
@@ -486,7 +553,7 @@
           </li>
 
           <li class="p15">
-            <div class="close"></div>
+            <div role="button" aria-label="Close" class="close" tabindex="0"></div>
             <section class="head line" id="head_p15">
               <div class="gallery reveal">
                 <div class="rhombus"></div>
@@ -558,7 +625,7 @@
             </section>
           </li>
           <li class="p14">
-            <div class="close"></div>
+            <div role="button" aria-label="Close" class="close" tabindex="0"></div>
             <section class="head line" id="head_p14">
               <div class="gallery reveal">
                 <div class="rhombus"></div>
@@ -651,7 +718,7 @@
             </section>
           </li>
           <li class="p13">
-            <div class="close"></div>
+            <div role="button" aria-label="Close" class="close" tabindex="0"></div>
             <section class="head line" id="head_p13">
               <div class="gallery reveal">
                 <div class="rhombus"></div>
@@ -735,7 +802,7 @@
             </section>
           </li>
           <li class="p12">
-            <div class="close"></div>
+            <div role="button" aria-label="Close" class="close" tabindex="0"></div>
             <section class="head line" id="head_p12">
               <div class="gallery reveal">
                 <div class="rhombus"></div>
@@ -810,7 +877,7 @@
             </section>
           </li>
           <li class="p11">
-            <div class="close"></div>
+            <div role="button" aria-label="Close" class="close" tabindex="0"></div>
             <section class="head line" id="head_p11">
               <div class="gallery reveal">
                 <div class="rhombus"></div>
@@ -844,7 +911,7 @@
 
 <!-- Project 8 -->
 <li class="p10">
-  <div class="close"></div>
+  <div role="button" aria-label="Close" class="close" tabindex="0"></div>
   <section class="head line" id="head_p10">
     <div class="gallery reveal">
       <div class="rhombus"></div>
@@ -957,7 +1024,7 @@
   </section>
 </li>
 <li class="p9">
-  <div class="close"></div>
+  <div role="button" aria-label="Close" class="close" tabindex="0"></div>
   <section class="head line" id="head_p9">
     <div class="gallery reveal">
       <div class="rhombus"></div>
@@ -998,7 +1065,7 @@
   </section>
 </li>
 <li class="p8">
-  <div class="close"></div>
+  <div role="button" aria-label="Close" class="close" tabindex="0"></div>
   <section class="head line" id="head_p8">
     <div class="gallery reveal">
       <div class="rhombus"></div>
@@ -1054,7 +1121,7 @@
   </section>
 </li>
 <li class="p7">
-  <div class="close"></div>
+  <div role="button" aria-label="Close" class="close" tabindex="0"></div>
   <section class="head line" id="head_p7">
     <div class="gallery reveal">
       <div class="rhombus"></div>
@@ -1167,7 +1234,7 @@
 
 <!-- Project 4 -->
 <li class="p6">
-  <div class="close"></div>
+  <div role="button" aria-label="Close" class="close" tabindex="0"></div>
   <section class="head line" id="head_p6">
     <div class="gallery reveal">
       <div class="rhombus"></div>
@@ -1262,7 +1329,7 @@
   </section>
 </li>
 <li class="p5">
-  <div class="close"></div>
+  <div role="button" aria-label="Close" class="close" tabindex="0"></div>
   <section class="head line" id="head_p5">
     <div class="gallery reveal">
       <div class="rhombus"></div>
@@ -1353,7 +1420,7 @@
   </section>
 </li>
 <li class="p4">
-  <div class="close"></div>
+  <div role="button" aria-label="Close" class="close" tabindex="0"></div>
   <section class="head line" id="head_p4">
     <div class="gallery reveal">
       <div class="rhombus"></div>
@@ -1478,7 +1545,7 @@
   </section>
 </li>
 <li class="p3">
-  <div class="close"></div>
+  <div role="button" aria-label="Close" class="close" tabindex="0"></div>
   <section class="head line" id="head_p3">
     <div class="gallery reveal">
       <div class="rhombus"></div>
@@ -1594,7 +1661,7 @@
   </section>
 </li>
 <li class="p2">
-  <div class="close"></div>
+  <div role="button" aria-label="Close" class="close" tabindex="0"></div>
   <section class="head line" id="head_p2">
     <div class="gallery reveal">
       <div class="rhombus"></div>
@@ -1702,7 +1769,7 @@
   </section>
 </li>
 <li class="p1">
-  <div class="close"></div>
+  <div role="button" aria-label="Close" class="close" tabindex="0"></div>
   <section class="head line" id="head_p1">
     <div class="gallery reveal">  
       <div class="rhombus"></div>
@@ -1856,65 +1923,16 @@
 </div><!-- / end CONTENT / -->
 
 
-<!-- / begin MENU / -->
-<div class="nav">
-
-  <div class="logo logo-right">
-    <h2>J.Skopp</h2>
-  </div>
-
-  <nav class="navigation clearfix" id="navigation">
-    <ul class="sf-menu menu">
-      <li class="menu-item menu-item-type-post_type menu-item-object-page">
-        <a href="#content">Hello</a>
-      </li>
-      <li class="menu-item menu-item-type-post_type menu-item-object-page">
-        <a href="#skills">Skills</a>
-      </li>
-      <li class="menu-item menu-item-type-post_type menu-item-object-page">
-        <a href="#projects">Projects</a>
-      </li>
-      <li class="menu-item menu-item-type-post_type menu-item-object-page">
-        <a href="#" class="process-dialog">Process</a>
-      </li>
-      <li class="menu-item menu-item-type-post_type menu-item-object-page">
-        <a href="#contact">Contact</a>
-      </li>
-      <li class="menu-item menu-item-type-post_type menu-item-object-page">
-        <a href="jules-skopp-2025-resume.pdf"><i class="fa fa-file-pdf-o"></i> Resume</a>
-      </li>
-      <li class="menu-item menu-item-type-post_type menu-item-object-page">
-        <a href="https://uxthis.blogspot.com" target="_blank"><i class="fa fa-external-link"></i>Blog</a>
-      </li>
-              <!--
-              <li class="menu-item menu-item-type-post_type menu-item-object-page">
-              <a href="jules-skopp-2013-portfolio.pdf"><i class="fa fa-file-pdf-o"></i> 2013 portfolio</a></li>
-      -->
-    </ul>
-  </nav>
-
-  <div class="social">
-    <a href="https://www.linkedin.com/in/juliusskopp" title="LinkedIn profile" target="_blank">
-      <i class="fa fa-linkedin"></i>
-    </a>
-    <a href="https://twitter.com/zmetak" title="Twitter profile" target="_blank">
-      <i class="fa fa-twitter"></i>
-    </a>
-    <a href="https://www.facebook.com/jules.skopp" title="Facebook profile" target="_blank">
-      <i class="fa fa-facebook"></i>
-    </a>
-  </div>
-
-</div>
 
 
-</div><!-- / end MENU / -->     
+
 </div><!-- / end CONTAINER / -->
 
-<div id="dialogOverlay" class="dialog-overlay">
+
+<div id="dialogOverlay" class="dialog-overlay" role="dialog" aria-labelledby="dialog-title">
  <div class="dialog-content">
-  <div class="close"></div>
-  <h1>Process</h1>
+  <div role="button" aria-label="Close" class="close" tabindex="0"></div>
+  <h1 id="dialog-title">Process</h1>
   <section class="process" id="process">
     <!-- / begin PROCESS / -->
     <div class="gallery scribble">
@@ -1976,14 +1994,18 @@
       // Open dialog
     $('.process-dialog').on('click', function(e) {
       e.preventDefault();
-      $('#dialogOverlay').fadeIn();
+      const $dialog = $('#dialogOverlay');
+      $dialog.fadeIn();
         $('body').addClass('dialog-open'); // Add dialog-open to prevent scrolling
+        window.trapFocus($dialog);
       });
 
       // Close dialog
     function closeDialog() {
-        $('#dialogOverlay').fadeOut();
+      const $overlay = $('#dialogOverlay');
+      $overlay.fadeOut();
         $('body').removeClass('dialog-open'); // Remove dialog-open to re-enable scrolling
+        window.releaseFocusTrap($overlay);
       }
 
       // Close on ESC key
@@ -2003,6 +2025,13 @@
       // Close on close button click
       $('#dialogOverlay .close').on('click', function() {
         closeDialog();
+      });  
+      
+      // Let the keyboard close the dialog for better accesibility
+      $('#dialogOverlay .close').on('keydown', function(event) {
+        if (event.key === 'Enter') {
+          closeDialog();
+        }
       });
 
       // Close on any link/button inside the dialog
@@ -2018,6 +2047,28 @@
       --------------------------------------------------------------------
       */
 
+      function showProjectSection ($projectListElement) {
+        $projectListElement.addClass("expanded")
+          .children("section.hidden")
+          .slideDown('slow', 'swing', function() {
+            /* show the close button once the expanding animation is finished */
+            $(this).siblings('.close').show().focus();
+              //nextAnim($(this).find('.gallery img.thumb,.gallery p'));
+          });
+      }
+
+      function hideProjectSection($projectListElement) {
+          /* retract the project details */
+          $projectListElement.children("section.hidden")
+          .slideUp('slow', 'swing', function() {
+            $projectListElement.removeClass("expanded");
+          });
+
+          /* scroll to the project head */ 
+          $('html, body').animate({
+            scrollTop: $projectListElement.offset().top
+          }, 500, "linear");
+      }
 
       //smooth scrolling
       $('a[href*="#"]:not([href="#"])').click(function() {
@@ -2059,32 +2110,21 @@
 
         /* expand the project details */
         if (!li.hasClass("expanded")) {
-
-          li.addClass("expanded")
-          .children("section.hidden")
-          .slideDown('slow', 'swing', function() {
-            /* show the close button once the expanding animation is finished */
-            $(this).siblings('.close').show();
-              //nextAnim($(this).find('.gallery img.thumb,.gallery p'));
-          });
-
-          
+          showProjectSection(li);
         } else {
-
-          /* retract the project details */
-          li.children("section.hidden")
-          .slideUp('slow', 'swing', function() {
-            li.removeClass("expanded");
-          });
-
-          /* scroll to the project head */ 
-          $('html, body').animate({
-            scrollTop: li.offset().top
-          }, 500, "linear");
+          hideProjectSection(li);
         }
-
       });
 
+      // Add a keydown handler to each of the project's close buttons for better accessibility
+      $('#projects li').each(function() {
+        const $li = $(this);
+        $($li).find('.close').on('keydown', function (event) {
+          if ($li.hasClass('expanded') && event.key === 'Enter') {
+            hideProjectSection($li);
+          }
+        })
+      })
 
       /*
       --------------------------------------------------------------------
@@ -2208,16 +2248,7 @@
         }
       });
 
-
-
-      // Event listener for the overlay play button
-      $('#video-overlay').on('click', function() {
-        $('#videos')[0].play();
-        $('#video-overlay').hide(); // Hide the overlay
-      });
-
-      // Event listener for the close button
-      $('#video-overlay-close').on('click', function(event) {
+      function closeVideoOverlay(event) {
         event.stopPropagation();
         resetVideoSequence();
         $('.video').hide(); // Hide the video
@@ -2229,6 +2260,20 @@
           'event_category': 'hero',
           'event_label': 'hero_video_intro_close'
         });
+      }
+
+      // Event listener for the overlay play button
+      $('#video-overlay').on('click', function() {
+        $('#videos')[0].play();
+        $('#video-overlay').hide(); // Hide the overlay
+      });
+
+      // Event listeners for the close button
+      $('#video-overlay-close').on('click', closeVideoOverlay);
+      $('#video-overlay-close').on('keydown', function(event) {
+        if (event.key === 'Enter') {
+          closeVideoOverlay(event);
+        }
       });
 
       // Function to reset the video sequence to the beginning
@@ -2428,5 +2473,10 @@
 
     lightbox.init();
   </script>
+      
+  <!------------------------------------------------------------------
+  MOBILE NAVIGATION
+  ------------------------------------------------------------------->
+  <script src="./scripts/mobile-navigation.js"></script>
 </body>
 </html>
