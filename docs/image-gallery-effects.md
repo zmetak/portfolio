@@ -13,7 +13,8 @@ To create an image gallery, you need to follow the following steps:
     - Add the property `data-pswp-height` with the integer value of the image's height at full resolution
 3. Inside the anchor tag, add an `img` tag. 
     - The `src` attribute of this img tag should point to the thumbnail you want to load
-4. Optional: If you want to add a caption to the image, add a `span` tag with the class of `pswp-caption-content`. Inside this span will be the contents of the caption
+4. Use the `alt` tag of the image to create a caption.
+5. Optional: If you want your caption to be a custom element with custom styles add a `span` tag with the class of `pswp-caption-content`, then this will be used as the caption.
 
 Then, we can initialize the galleries with caption support with the following snippet:
 
