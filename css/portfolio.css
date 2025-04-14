@@ -251,6 +251,10 @@ HELLO
   min-height: 460px;
 }
 
+.hello.video-playing { /* hides hero image when the video is playing, this goes dark on smaller screens */
+  background: #fff;
+}
+
 .hello .video {
   display: none;
   cursor: pointer;
