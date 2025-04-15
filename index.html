@@ -1895,16 +1895,20 @@
 <section class="contact" id="contact">
   <!-- / begin CONTACT / -->
   <h1>Contact me</h1>
-  <p>Thanks for reading through all that. If you're still interested in collaborating with me, please don't hesitate to reach out. You can always reach me at +41 78 603 31 32 (Swiss). If you wish to include more detail fill in the form below:</p>
+  <p>Thanks for reading through all that. If you're still interested in collaborating with me, please don't hesitate to reach out. You can always reach me at <span class="white">+41 78 603 31 32</span> (Swiss). If you wish to include more detail fill in the form below:</p>
   <script type="text/javascript">var submitted=false;</script>
-  <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {window.location='https://jules.skopp.sk/thankyou.html';}"></iframe>
-  <form action="https://docs.google.com/forms/d/1RrZ706LiBZNELIDgF1UCceznI6H5bN_TWjUoWiudf8M/formResponse" method="post" target="hidden_iframe" onsubmit="submitted=true;">
+  <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {
+     window.showThankYouDialog();
+    // clear the form's previous entry
+    document.getElementById('contact-form').reset();
+  }"></iframe>
+  <form id="contact-form" action="https://docs.google.com/forms/d/1RrZ706LiBZNELIDgF1UCceznI6H5bN_TWjUoWiudf8M/formResponse" method="post" target="hidden_iframe" onsubmit="submitted=true;">
     <div class="email">
       <div class="gallery">
         <label for="entry_726817194">Please, enter your email:</label>
       </div>
       <div class="description">
-        <input aria-required="true" dir="auto" id="entry_726817194" name="entry.726817194" type="text" value="" />
+        <input required aria-required="true" dir="auto" id="entry_726817194" name="entry.726817194" type="email" value="" />
       </div>
     </div>
     <div class="message">
@@ -1912,7 +1916,7 @@
         <label for="entry_125753678">How can I help you?</label>
       </div>
       <div class="description">
-        <textarea aria-required="true" cols="0" dir="auto" id="entry_125753678" name="entry.125753678" rows="8"></textarea>
+        <textarea required aria-required="true" cols="0" dir="auto" id="entry_125753678" name="entry.125753678" rows="8"></textarea>
         <input name="draftResponse" type="hidden" value="[] " />
         <input name="pageHistory" type="hidden" value="0" />
         <input id="ss-submit" name="submit" type="submit" value="Send" />
@@ -1955,6 +1959,18 @@
   </section><!-- / end PROCESS / -->
 </div>
 </div>
+
+<div id="thankYouOverlay" class="dialog-overlay" role="dialog" aria-labelledby="thankyou-dialog-title">
+  <div class="dialog-content">
+   <div role="button" aria-label="Close" class="close" tabindex="0"></div>
+   <h1 id="thankyou-dialog-title">Thank you!</h1>
+     <div class="description">
+       <p class="reveal">
+         Thanks for reaching out! I'll get back to you as soon as possible, usually within a day. Meanwhile you can add me on <a href="https://www.linkedin.com/in/juliusskopp">LinkedIn</a>.
+        </p>
+      </div> 
+    </div>
+ </div>
 
 <script src="https://code.jquery.com/jquery-3.7.1.min.js" type="text/javascript"></script>
 <script src="./libs/jquery.timeago.js" type="text/javascript"></script>
@@ -2478,5 +2494,10 @@
   MOBILE NAVIGATION
   ------------------------------------------------------------------->
   <script src="./scripts/mobile-navigation.js"></script>
+
+  <!------------------------------------------------------------------
+  THANK YOU DIALOGE
+  ------------------------------------------------------------------->
+  <script src="./scripts/thank-you-dialog.js"></script>
 </body>
 </html>
