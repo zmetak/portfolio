@@ -480,6 +480,10 @@ body.dialog-open {
   display: block;
 }
 
+#thankYouOverlay .dialog-content {
+  width: 80%;
+  max-width: 600px;
+}
 
 /*
 --------------------------------------------------------------------
@@ -829,7 +833,7 @@ CONTACT
   margin-left: 85px;
 }
 
-.contact input[type=text], 
+.contact input, 
 .contact textarea {
   border: none;
   display: block;
@@ -839,7 +843,7 @@ CONTACT
   opacity: 0.7;
 }
 
-.contact input[type=text]:focus, 
+.contact input:focus, 
 .contact textarea:focus {
   opacity: 1;
 }
@@ -1157,7 +1161,7 @@ ANIMATIONS
 
   /* ----- CONTACT ----- */
 
-  .contact input[type=text], .contact textarea {
+  .contact input, .contact textarea {
     width: 322px;
   }
 
@@ -1289,7 +1293,7 @@ ANIMATIONS
     margin-left: 40px;
   }
 
-  .contact input[type=text], 
+  .contact input, 
   .contact textarea {
     width: 80%;
     margin: 0 0 20px 40px;
@@ -1421,7 +1425,7 @@ ANIMATIONS
     min-height: 140px;
   }
 
-  .contact input[type=text], 
+  .contact input, 
   .contact textarea {
     width: 70%;
     margin: 0 40px 20px 40px;
@@ -1433,6 +1437,10 @@ ANIMATIONS
 :focus-visible {
   outline: 2px solid #86ae8c;
   outline-offset: 2px;
+}
+
+.white {
+  color: white !important;
 }
 
 /*
